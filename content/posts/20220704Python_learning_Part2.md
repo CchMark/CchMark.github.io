@@ -1,7 +1,6 @@
 ---
-title: "20220704Python_learning_PART2"
-date: 2022-07-04T11:10:18+08:00
-draft: true 
+title: "20220704Python_learning_Part2"
+date: 2022-07-04T13:20:59+08:00
 author: Mark
 description: 趣味
 categories:
@@ -10,7 +9,7 @@ tags:
   - 技術
 ---
 
-<H1>Selenium + WebDriver 安裝
+<H1>Selenium + WebDriver 安裝</H1>
 
 1. Selenium 安裝
 在python裡執行以下程式碼，即可安裝Selenium套件。
