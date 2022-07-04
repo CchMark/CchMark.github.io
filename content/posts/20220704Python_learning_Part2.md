@@ -9,17 +9,17 @@ tags:
   - 技術
 ---
 
-<H1>Selenium + WebDriver 安裝</H1>
+# Selenium + WebDriver 安裝
 
-1. Selenium 安裝
+## 1.Selenium 安裝
 在python裡執行以下程式碼，即可安裝Selenium套件。
 `pip install selenium`
 
-2. Webdriver 下載
+## 2.Webdriver 下載
 [Chrome](https://sites.google.com/chromium.org/driver/)要使用Selenium爬蟲前，Webdriver是必備的，而不同的瀏覽器會有不同的driver。
 選定了瀏覽器，在下載前，請記得檢查目前的瀏覽器版本，再下載對應的Webdriver，之後也要適時更新版本以維護程式碼運行喔！
 
-3.確認是安裝成功
+## 3.確認是安裝成功
 
     from selenium import webdriver # 叫出同一目錄的selenium和WebDriver
     driver = webdriver.Chrome() # 此WebDriver是Chrome版本的
