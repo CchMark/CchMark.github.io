@@ -3,7 +3,6 @@ title: "20220704Python_learning"
 date: 2022-07-04T10:36:37+08:00
 author: Mark
 description: 描述內容
-url: /自訂網址
 image: /圖片
 categories:
   - Python

@@ -3,7 +3,7 @@ title: "C#_Tech"
 date: 2022-06-28T15:39:27+08:00
 author: Mark
 description: 描述內容
-url: /自訂網址
+
 image: /圖片
 categories:
   - C#
