@@ -2,14 +2,12 @@
 title: "20220704Python_learning2"
 date: 2022-07-04T11:10:18+08:00
 draft: true 
-author: 作者名稱
-description: 描述內容
-image: /圖片
+author: Mark
+description: 趣味
 categories:
-  - 設定分類
+  - Python
 tags:
-  - 設定tag標籤
-  - 設定tag標籤
+  - 技術
 ---
 
 
