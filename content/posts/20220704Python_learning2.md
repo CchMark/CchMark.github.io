@@ -1,5 +1,5 @@
 ---
-title: "20220704Python_learning2"
+title: "20220704Python_learning_PART2"
 date: 2022-07-04T11:10:18+08:00
 draft: true 
 author: Mark
