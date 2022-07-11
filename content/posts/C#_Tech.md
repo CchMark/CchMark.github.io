@@ -1,9 +1,8 @@
 ---
-title: "C#_Tech"
+title: "MVC5 bootstrap 3 更新 bootstrap 5 "
 date: 2022-06-28T15:39:27+08:00
 author: Mark
-description: 描述內容
-image: /圖片
+description: 版本升級
 categories:
   - C#
 tags:
