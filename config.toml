@@ -44,7 +44,7 @@ customJs = ["js/soho.js"]
 
   [[params.socialIcons]]
   icon = "fas fa-envelope"
-  title = "E-mail"
+  title = "E-Mail"
   url = "mailto:markchangstart2022@gmail.com"
 
 [menu]
