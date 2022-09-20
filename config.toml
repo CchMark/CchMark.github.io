@@ -42,6 +42,11 @@ customJs = ["js/soho.js"]
   title = "Twitter"
   url = "#"
 
+  [[params.socialIcons]]
+  icon = "fas fa-envelope"
+  title = "E-mail"
+  url = "mailto:markchangstart2022@gmail.com"
+
 [menu]
 
   [[menu.main]]
