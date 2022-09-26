@@ -1,0 +1,100 @@
+---
+title: "20220926CSharp"
+date: 2022-09-26T10:16:57+08:00
+draft: true
+---
+
+# C# 何謂集合(Collections)
+
+
+## 集合有兩種使用方式
+
+
+### 1.建立物件的陣列(Array)
+ 
+ - 陣列(Array): 需需相同型別的集合，並透過引索取得資料內容。長度是固定的。用途適用於建立和處理固定數目的強類型物件
+  
+  
+    
+    ```
+    //一般宣告陣列，可以初始化陣列。 不需要長度規範，因為它可以由清單中的內容做推斷。
+    int[] ints1 = new int[] {1,2,3 };
+
+    string[] strings1  = new string[] { "a", "b", "c" };  
+    ```
+
+    ```
+    //宣告時，初始化陣列時避免 new 運算式和陣列類型，稱為隱含型別陣列宣告(編譯器會自行推測型別)
+    int[] numbers = { 1, 2, 3, 4, 5 };
+
+    string[] strings = { "a", "b", "c" };  
+    ```
+
+- 從陣列(Array)取得資料 
+  -    
+    透過索引取得陣列的資料
+
+    ```
+    string[] strings = { "a", "b", "c" }; 
+    int[] numbers = { 1, 2, 3, 4, 5 };
+
+    Console.WriteLine(strings[0]);
+    Console.WriteLine(numbers[0]);
+    /*Output:
+    a
+    1
+    */
+    ```
+### 2.建立物件的集合
+- List(稱為串列 或 清單): 需相同型別的集合，並透過引索取得資料內容。長度是任意的。用途能夠讓您使用強型別物件清單。
+
+    #### 使用簡單的集合: 宣告 list<T>類別，<T>是指清單中內容型別，這邊使用String。另外，也是可以運用其他型別。
+    ```
+    var list = new List<string>();
+    //新增清單 值
+    list.Add("a");
+    list.Add("b");
+    list.Add("c");
+
+    //遍歷list的值 給 item 
+    foreach (var item in list)
+    {
+        Console.Write(item);
+    }
+    ```
+
+    #### List\<T> 中的項目類型，一般都使用自定義類別。
+    ```
+    //宣告 List<MyClass> 實體化
+    List<MyClass> myClasses = new List<MyClass>();
+    myClasses.Add(new MyClass() { Name = "a", Description = "aaa", Id = 1 });
+    myClasses.Add(new MyClass() { Name = "b", Description = "bbb", Id = 2 });
+    myClasses.Add(new MyClass() { Name = "c", Description = "ccc", Id = 3 });
+
+    foreach (var item in myClasses)
+    {
+        Console.WriteLine($"Name:{item.Name} Description:{item.Description} Id:{item.Id}");
+    }
+    //定義類別
+    public class MyClass
+    {
+        //定義參數
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Id { get; set; }
+    }
+
+    ```
+
+
+
+
+
+
+
+
+## **參考文章**
+
+[集合](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/collections)
+
+[ASP.NET MVC 從入門到放棄 (Day6) -C#集合、IEnumerable ICollection IList介紹](https://ithelp.ithome.com.tw/articles/10260658?sc=iThelpR)
