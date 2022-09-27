@@ -2,7 +2,7 @@
 title: "20220920CSharpOOP"
 date: 2022-09-20T10:24:24+08:00
 author: Mark
-description: 複習
+description: 筆記
 categories:
   - C Sharp OOP
 tags:
