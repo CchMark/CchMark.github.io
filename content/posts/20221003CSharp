@@ -1,0 +1,50 @@
+---
+title: "20221003CSharp"
+date: 2022-10-03T15:11:37+08:00
+author: Mark
+description: 筆記
+categories:
+  - C Sharp OOP
+tags:
+  - 技術
+  - 基礎
+---
+
+# C# List Add 擴充方法 小技巧
+
+```
+        //限制必須使用執行個體方法或是擴充方法的狀況 集合初始設定式的 Add 擴充方法
+        static void Main(string[] args)
+        {
+            
+            //以前需要這樣寫
+            //var people = new List<Person>{ new Person { Name = "Mark49", Age = 24 }, new Person { Name = "Sherry", Age = 20 }};
+
+            //現在透過Add擴充方法 可以簡化如下新增 List 資料
+            var people = new List<Person> { { "Mark49", 24 },{"Sherry" ,20} };
+            Display(people);
+        }
+
+        private static void Display(IEnumerable<Person> source)
+        {
+            foreach (var p in source)
+            {
+                Console.WriteLine(p.Name + " is " + p.Age + "years old");
+            }
+        }
+
+        static class PersonExtesnion
+        {
+            public static void Add(this ICollection<Person> source, string name, int age)
+            {
+                source.Add(new Person { Name = name, Age = age });
+            }
+        }
+
+        class Person
+        {
+            public string Name { get; set; }
+
+            public int Age { get; set; }
+        }
+```
