@@ -2,7 +2,7 @@
 title: "20221104CSharpPart2"
 date: 2022-11-04T16:01:16+08:00
 author: Mark
-description: 
+description: 筆記
 categories:
   - C Sharp 
 tags:
