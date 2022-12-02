@@ -67,11 +67,16 @@ customJs = ["js/soho.js"]
   url = "/categories/"
 
   [[menu.main]]
+  name = "Archives"
+  identifier = "archives"
+  weight = 250
+  url = "/archives/"
+
+  [[menu.main]]
   name = "About"
   identifier = "about"
   weight = 300
   url = "/about/"
-
 
 [taxonomies]
 category = "categories"
