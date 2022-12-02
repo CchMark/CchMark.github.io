@@ -1,12 +1,13 @@
 ---
-title: "20221201ToolTips"
+title: "20221201ToolsTips"
 date: 2022-12-01T16:49:20+08:00
 author: Mark
 description: 筆記
 categories:
-  - Tool
-tags:
+  - Tools
   - Visual Studio 
+tags:
+  - 工具應用
 ---
 
 # Visual Studio 好用設定與技巧
