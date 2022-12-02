@@ -72,11 +72,6 @@ customJs = ["js/soho.js"]
   weight = 300
   url = "/about/"
 
-  [[menu.main]]
-  name = "Archives"
-  identifier = "archives"
-  weight = 400
-  url = "/archives/"
 
 [taxonomies]
 category = "categories"
