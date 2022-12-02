@@ -6,7 +6,7 @@ description: 筆記
 categories:
   - C Sharp 
 tags:
-  - 基礎
+  - 技術
   - Dapper 
   - ASP.NET
 ---

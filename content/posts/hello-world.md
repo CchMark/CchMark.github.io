@@ -6,10 +6,6 @@ categories:
 tags:
 - 首篇文章
 - 部落格
-# keywords:
-# - tech
-#thumbnailImage: //example.com/image.jpg
 ---
 ## Just keep going straight!
 
-<!--more-->

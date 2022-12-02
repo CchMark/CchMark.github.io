@@ -5,7 +5,6 @@ author: Mark
 description: 筆記
 categories:
   - Tools
-  - Visual Studio 
 tags:
   - 工具應用
 ---

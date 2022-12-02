@@ -4,10 +4,9 @@ date: 2022-09-20T10:24:24+08:00
 author: Mark
 description: 筆記
 categories:
-  - C Sharp OOP
+  - C Sharp 
 tags:
   - 技術
-  - 基礎
 ---
 
 # C# .NET 型別 
