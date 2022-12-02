@@ -1,0 +1,27 @@
+{{ define "main" -}}
+<div class="post">
+  <h1 class="title">{{ .Title }}</h1>
+  {{ with .Params.tagline }}<span class="tagline">{{ . }}</span>{{ end }}
+
+  {{ if ne .Type "page" -}}
+  <div class="post-date">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> <span class="readtime">&middot; {{ .ReadingTime }} min read</span>
+  </div>
+  {{- end }}
+
+  <div>
+    {{ range (.Site.RegularPages.GroupByDate "2006") }}
+    <h3>{{ .Key }}</h3>
+
+        <ul class="archive-list">
+        {{ range (where .Pages "Type" "post") }}
+            <li>
+            {{ .PublishDate.Format "2006-01-02" }}
+            ->
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+  {{ end }}
+  </div>
+{{- end }}
