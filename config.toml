@@ -1,11 +1,15 @@
+# 網站網址
 baseURL = "https://cchmark.github.io"
-title = "The Mark Chang Live"
+# 網站名稱
+title = "The Mark Chang Life"
+# 預設語系
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 summarylength = 10
 enableEmoji = true
 paginate = 5
 ignoreErrors = ["error-remote-getjson"]
+# Disqus 留言板
 disqusShortname = "https://cchmark.github.io"
 
 [params]
