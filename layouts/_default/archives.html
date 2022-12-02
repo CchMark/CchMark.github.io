@@ -1,27 +1,33 @@
-{{ define "main" -}}
-<div class="post">
-  <h1 class="title">{{ .Title }}</h1>
-  {{ with .Params.tagline }}<span class="tagline">{{ . }}</span>{{ end }}
+{{ define "main" }}
+<section class="section is-fullheight">
+  {{ $type := .Type }}
+  {{ $.Scratch.Set "count" 1 }}
 
-  {{ if ne .Type "page" -}}
-  <div class="post-date">
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> <span class="readtime">&middot; {{ .ReadingTime }} min read</span>
-  </div>
-  {{- end }}
-
-  <div>
     {{ range (.Site.RegularPages.GroupByDate "2006") }}
-    <h3>{{ .Key }}</h3>
+      {{ if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) }}
 
-        <ul class="archive-list">
-        {{ range (where .Pages "Type" "post") }}
-            <li>
-            {{ .PublishDate.Format "2006-01-02" }}
-            ->
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
+        {{ range (where .Pages "Type" $type) }}
+          {{ if (eq ($.Scratch.Get "count") 1) }}
+            {{ $.Scratch.Set "count" 0 }}
+            <h1 class="title is-4 has-text-weight-normal">{{ .Date.Format "2006" }}</h1>
+          {{ end }}
         {{ end }}
-    </ul>
+
+        {{ $.Scratch.Set "count" 1 }}
+
+          <ul class="article__list">
+          {{ range (where .Pages "Type" $type) }}
+            {{ if (ne .Params.hidden true) }}
+              <li>
+                <a class="is-block" href="{{ .RelPermalink }}">
+                  <span class="has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span> — {{ .Title }}
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+          </ul>
+
+    {{ end }}
   {{ end }}
-  </div>
-{{- end }}
+</section>
+{{ end }}
