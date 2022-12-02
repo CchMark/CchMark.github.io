@@ -20,9 +20,9 @@ description = "錯誤中學習成長"
 # gravatar = "soho@example.com"
 profilePicture = "images/black.jpg"
 
-copyright = "Mark_Chang"
-license = "CC BY-SA 4.0"
-licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+copyright = "Mark_Chang  All rights reserved."
+# license = "CC BY-SA 4.0"
+# licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
 
 ## Set custom theme color.
 # themeColor = "#fc2803"
