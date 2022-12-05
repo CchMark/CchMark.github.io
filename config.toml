@@ -54,17 +54,17 @@ customJs = ["js/soho.js"]
 
 [menu]
 
-  [[menu.main]]
-  name = "Posts"
-  weight = 100
-  identifier = "posts"
-  url = "/posts/"
+  # [[menu.main]]
+  # name = "Posts"
+  # weight = 100
+  # identifier = "posts"
+  # url = "/posts/"
 
-  [[menu.main]]
-  name = "Categories"
-  weight = 200
-  identifier = "categories"
-  url = "/categories/"
+  # [[menu.main]]
+  # name = "Categories"
+  # weight = 200
+  # identifier = "categories"
+  # url = "/categories/"
 
   [[menu.main]]
   name = "Archives"
