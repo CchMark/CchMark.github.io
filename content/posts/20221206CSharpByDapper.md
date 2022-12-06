@@ -1,5 +1,5 @@
 ---
-title: "2022CSharpByDapper"
+title: "Dapper 常用語法"
 date: 2022-12-06T09:56:44+08:00
 author: Mark
 description: 筆記
