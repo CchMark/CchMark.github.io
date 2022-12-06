@@ -7,6 +7,7 @@ categories:
   - C Sharp 
 tags:
   - 技術
+  - ASP.NET
 ---
 
 # C# .NET 型別 
