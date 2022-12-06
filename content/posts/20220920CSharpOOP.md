@@ -1,5 +1,5 @@
 ---
-title: "20220920CSharpOOP"
+title: "C# .NET 型別"
 date: 2022-09-20T10:24:24+08:00
 author: Mark
 description: 筆記

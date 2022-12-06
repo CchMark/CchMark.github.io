@@ -1,5 +1,5 @@
 ---
-title: "20221104CSharpPart2"
+title: "辦別IEnumerable和List用途"
 date: 2022-11-04T16:01:16+08:00
 author: Mark
 description: 筆記

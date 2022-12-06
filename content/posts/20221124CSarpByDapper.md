@@ -1,5 +1,5 @@
 ---
-title: "20221124CSarpByDapper"
+title: "如何應用Dapper"
 date: 2022-11-24T16:04:39+08:00
 author: Mark
 description: 筆記
