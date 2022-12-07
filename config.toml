@@ -14,7 +14,7 @@ disqusShortname = "https://cchmark.github.io"
 
 [params]
 author = "Mark_Chang"
-description = "實作中學習成長"
+description = "learn by doing, and by falling over."
 
 ## Set one of:
 # gravatar = "soho@example.com"
