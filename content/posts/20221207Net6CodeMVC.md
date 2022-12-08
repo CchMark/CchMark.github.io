@@ -1,88 +1,49 @@
 ---
 title: "ASP.NET Core 6 Mvc 學習筆記 Day 1"
 date: 2022-12-07T14:15:19+08:00
+author: Mark
 description: 筆記
 categories:
   - C Sharp 
 tags:
-  - 技術 
-  - ASP.NET CODE MVC
-  - .NET6
+  - 技術
+  - ASP.NET Code
+  - .NET 6
 ---
 
-# .NET 6 如何讀取AppSettings
+# 什麼是MVC 
+* MVC 是三個部分組成的
+  * Model 模型 
+  * View 檢視
+  * Controller 控制器
 
-## AppSettings 
-- 由於.Net code 捨棄 Web.config 改為前端常用的JSON格式作為設定檔
+## Model 模型 
+* 主要資料處理的部分.
+  另外,如果ModelBind有問題時,先確認欄位名稱,欄位名稱對不上就接不到資料,因此就不需進Controller查問題.
+  * 資料庫的存取(讀/寫)
+  * 資料結構定義
+  * 資料格式驗證
+  * 資料源頭
+  * DAO(Data Access Object 資料訪問物件)
+  * DTO(Data Transfer Object 資料傳遞物件)
 
-好處的部分:
-- 依據環境變數切換不同的設定檔
-- 使用強型別有效避免型別錯誤
-- 預設範本已套用依賴注入
+## View 檢視
+* 主要是呈現網頁畫面顯示以及傳遞資料給後端.
+除此之外,不要有過多的邏輯和運算寫在View.
+  * 輸出: 資料輸出並顯示畫面
+    * HTML,CSS,JavaScript
+  * 輸入: 畫面輸入的資料傳回後端
 
-## Step 1
+## Controller 控制器
+* 主要負責接收資料和傳遞資料的部分
+  * 控制整體的業務流程
+  * 依據規範的格式對資料處理以及View的呈現
+  * 控制器接收外部傳入的資料並與Model進行資料處理後決定使用哪種View呈現
 
-* Program.cs 的builder.Services.AddControllersWithViews(); 下方注入
-``` C#
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-```
+## 結論
+透過MVC有效實現關注點分離,利於團隊分工.
 
-## Step 2 
+tips: MVC重點 Model 要肥 Controller 要瘦 View 要笨 
 
-* HomeController.cs 撰寫如下Code
-``` C#
-   public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
-        private readonly AppSettings _appSettings;
-
-        public HomeController(ILogger<HomeController> logger, IOptions<AppSettings> appSettings)
-        {
-            _logger = logger;
-            _appSettings = appSettings.Value;
-        }
-
-        public IActionResult Index()
-        {
-            ViewBag.EnvType = _appSettings.EnvType;
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
-```
-
-## Step 3 
-
-* Models 新增AppSettings.cs
-``` C#
-    public class AppSettings
-    {
-        public string EnvType { get; set; }
-    }
-```
-
-## Step 4
-
-* View&rarr;Home&rarr;Index.cshtml 顯示EnvType
-
-``` C#
-<div class="text-center">
-    <h1 class="display-4">Welcome @ViewBag.EnvType</h1>
-</div>
-```
-
-### tips
-* launchSettings.json 透過調整環境變數 ASPNETCORE_ENVIRONMENT 依據環境讀取不同設定
-  - 測試環境 Development(預設)
-  - 預備環境 Staging
-  - 正式環境 Production
+### 參考
+[精準解析 ASP.NET Core MVC(.NET6)](https://skilltree.my/Events/2022/12/3/analyzing-asp-dot-net-core-mvc-batch-4)
