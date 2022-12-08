@@ -6,8 +6,7 @@ description: 筆記
 categories:
   - C Sharp 
 tags:
-  - 技術
-  - ASP.NET Code
+  - ASP.NET Code MVC
   - .NET 6
 ---
 
