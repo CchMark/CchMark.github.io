@@ -1,14 +1,13 @@
 ---
-title: "20221227ConcatenatedGoogleSheetApi"
+title: "建置GoogleCloud環境"
 date: 2022-12-27T10:44:49+08:00
 author: Mark
 description: 筆記
 categories:
-  - C Sharp 
+  - Google  
 tags:
-  - ASP.NET 
   - GoogleSheet API
-  - CRUD
+  - GoogleCloud
 ---
 
 &rarr; 
