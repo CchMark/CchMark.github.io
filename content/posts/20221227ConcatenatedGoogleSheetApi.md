@@ -11,7 +11,7 @@ tags:
 ---
 
 &rarr; 
-# GooleSheet 環境建置
+# GoogleSheet 環境建置
 
 
 - STEP 1 : 建立GOOGLE Cloud 
