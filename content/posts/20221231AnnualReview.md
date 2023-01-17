@@ -34,7 +34,7 @@ An in-depth, step-by-step guide to classes, interfaces and object-oriented progr
 - C# Advanced Topics: Prepare for Technical Interviews
 Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ, Async/Await and more!   
 
-如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕的會就完美了QQ
+如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ
 
 
 ### Web API入門實戰（.NET 6）
