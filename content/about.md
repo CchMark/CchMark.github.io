@@ -13,6 +13,6 @@ and a Master of Network Learning Technology.
 Now the reality is I never became a game plugin developer.
 But A lot of companies needed a Web site.
 So I started working professionally from year 2018.
-This time in year 2022 have 4 years of experience in the industry along these years.
+This time in year 2023 have 5 years of experience in the industry along these years.
 
 I hope you enjoyed this CV and I'll see you in the next.
