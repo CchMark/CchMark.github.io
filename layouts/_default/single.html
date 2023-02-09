@@ -1,7 +1,7 @@
-{{ define "main" -}}
 <head>
-  <link rel="stylesheet" type="text/css" href="{{ "styles.css" | relURL }}">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
+{{ define "main" -}}
 <div class="post">
   <h1 class="title">{{ .Title }}</h1>
   {{ with .Params.tagline }}<span class="tagline">{{ . }}</span>{{ end }}
