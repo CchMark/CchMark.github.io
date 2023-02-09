@@ -20,18 +20,43 @@
   {{- end }}
 
   <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+  <!-- 定義獎勵區塊的外層元素 -->
   <div class="reward-container">
-      <div></div>
-      <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-        donate     
-      </button>
-      <div id="qr" style="display: none;">
-          <div style="display: inline-block;">
-              <img src="/images/black.jpg" alt="donate">
-              <p>donate</p>
-          </div>
+  
+    <!-- 顯示空白的區塊 -->
+    <div></div>
+  
+    <!-- 定義捐贈按鈕 -->
+    <button id="donate-button">donate</button>
+  
+    <!-- 定義 QR 碼的外層元素 -->
+    <div id="qr" style="display: none;">
+  
+      <!-- 顯示 QR 碼的內層元素 -->
+      <div style="display: inline-block;">
+        <img src="/images/black.jpg" alt="donate">
+        <p>donate</p>
       </div>
+  
+    </div>
+  
   </div>
+  
+  <script>
+    // 取得捐贈按鈕
+    const donateButton = document.getElementById('donate-button');
+  
+    // 取得 QR 碼的外層元素
+    const qr = document.getElementById('qr');
+  
+    // 為捐贈按鈕添加點擊事件
+    donateButton.addEventListener('click', function() {
+      // 切換 QR 碼的顯示狀態
+      qr.style.display = qr.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
+  
 
   {{ if (and .Site.DisqusShortname (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
   {{ partial "disqus.html" . }}
