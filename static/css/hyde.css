@@ -371,3 +371,21 @@ figcaption {
 .nowrap {
   white-space: nowrap;
 }
+
+/* 獎勵區塊的外層元素的樣式 */
+.reward-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 捐贈按鈕的樣式 */
+#donate-button {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
