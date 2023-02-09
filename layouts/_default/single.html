@@ -19,41 +19,15 @@
   {{ partial "share.html" . }}
   {{- end }}
 
-  <!-- 定義獎勵區塊的外層元素 -->
-  <div class="reward-container">
-  
-    <!-- 顯示空白的區塊 -->
-    <div></div>
-  
-    <!-- 定義捐贈按鈕 -->
-    <button id="donate-button">donate</button>
-  
-    <!-- 定義 QR 碼的外層元素 -->
-    <div id="qr" style="display: none;">
-  
-      <!-- 顯示 QR 碼的內層元素 -->
-      <div style="display: inline-block;">
-        <img src="/images/black.jpg" alt="donate">
-        <p>donate</p>
+  <div style="color:red;text-align:center;cursor: pointer;text-decoration: underline; font-size: 24px;" onclick="payBlock()">如果喜歡可以請我喝杯咖啡，這樣我會更有動力唷XDD</div>
+  <div id="pay" style="margin-top: 20px; text-align: center; overflow: hidden; height: 360px; transition: height 0.5s ease 0s;">
+      <div style="display:inline-block; width: 200px;">
+          <img src="/images/black.jpg" border="0" alt="街口支付">
+          <p style="font-size: 20px;">街口支付</p>
+          <p>街口帳號: 123</p>
       </div>
-  
-    </div>
-  
   </div>
-  
-  <script>
-    // 取得捐贈按鈕
-    const donateButton = document.getElementById('donate-button');
-  
-    // 取得 QR 碼的外層元素
-    const qr = document.getElementById('qr');
-  
-    // 為捐贈按鈕添加點擊事件
-    donateButton.addEventListener('click', function() {
-      // 切換 QR 碼的顯示狀態
-      qr.style.display = qr.style.display === 'none' ? 'block' : 'none';
-    });
-  </script>
+
   
   {{ if (and .Site.DisqusShortname (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
   {{ partial "disqus.html" . }}
