@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitPage on The Mark Chang Life</title><link>https://cchmark.github.io/tags/gitpage/</link><description>Recent content in GitPage on The Mark Chang Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 07 Jul 2023 19:03:37 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/gitpage/index.xml" rel="self" type="application/rss+xml"/><item><title>20230707 升版筆記</title><link>https://cchmark.github.io/posts/20230707diary/</link><pubDate>Fri, 07 Jul 2023 19:03:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20230707diary/</guid><description>升級步驟 筆記一下~紀錄升級流程步驟XD
+1. 修改 HUGO_DEPLOY.yml 在HUGO_DEPLOY.yml檔案中，需要做修改。
+runs-on: ubuntu-18.04 將上述行修改為：
+runs-on: ubuntu-22.</description></item></channel></rss>
