@@ -13,20 +13,20 @@ tags:
 
 
 We replaced the following:
-```
+```C#
 bundles.Add(new ScriptBundle("~/bundles/mybundle").Include(
                 "~/Scripts/...",
                 "~/Scripts/..."));
 ```
 with:
-```
+```C#
 bundles.Add(new Bundle("~/bundles/mybundle").Include(
                 "~/Scripts/...",
                 "~/Scripts/..."));
 ```
 
 ----
-```
+```C#
 <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
