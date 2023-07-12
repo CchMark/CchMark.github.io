@@ -45,4 +45,4 @@ tags:
 tips: MVC重點 Model 要肥 Controller 要瘦 View 要笨 (引用Will保哥的口絕XD)
 
 ### 參考
-[精準解析 ASP.NET Core MVC(.NET6)](https://skilltree.my/Events/2022/12/3/analyzing-asp-dot-net-core-mvc-batch-4)
+[精準解析 ASP.NET Core MVC(.NET6)](https://skilltree.my/Events/2023/8/5/analyzing-asp-dot-net-core-mvc-batch-5/fbb01d0e-cb56-4752-9620-5bdd651470a9)
