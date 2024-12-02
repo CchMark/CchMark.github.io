@@ -1,0 +1,4 @@
+{{ $startYear := .Site.Params.startYear }}
+{{ $currentYear := now.Year }}
+{{ $years := sub $currentYear $startYear }}
+{{ $years }}

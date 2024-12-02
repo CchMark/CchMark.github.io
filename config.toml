@@ -15,6 +15,7 @@ disqusShortname = "https://cchmark.github.io"
 [params]
 author = "Mark_Chang"
 description = "learn by doing, and by falling over."
+startYear = 2018
 
 ## Set one of:
 # gravatar = "soho@example.com"
@@ -84,7 +85,9 @@ tag = "tags"
 series = "series"
 
 [markup]
-
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
   codeFences = true
   guessSyntax = false
