@@ -25,7 +25,7 @@
 </span></span></span><span style=display:flex><span><span style=color:#75715e>  List:8
 </span></span></span><span style=display:flex><span><span style=color:#75715e>  List:10
 </span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
-</span></span></code></pre></div><hr><ul><li>yield return的做法為遇到符合條件的元素時，即刻將該元素回傳回上一層進行運算，運算完後，再回到迴圈中找尋下一個元素。<ul><li>不過在MSDN對於yield的使用上有明確指出一些限制：<ul><li>回傳類型必須為IEnumerable, IEnumerable, IEnumerator, IEnumerator</li><li>不可包含任何 ref 與 out 參數</li><li>匿名方法與不安全區塊(unsafe)區塊不可使用 yield return 參考如下圖
+</span></span></code></pre></div><hr><ul><li>yield return的做法為遇到符合條件的元素時，即刻將該元素回傳回上一層進行運算，運算完後，再回到迴圈中找尋下一個元素。<ul><li>不過在MSDN對於yield的使用上有明確指出一些限制：<ul><li>回傳類型必須為IEnumerable, IEnumerable<t>, IEnumerator, IEnumerator<t></li><li>不可包含任何 ref 與 out 參數</li><li>匿名方法與不安全區塊(unsafe)區塊不可使用 yield return 參考如下圖
 <img src=/images/yieldErrorImg.JPG alt=不安全區塊(unsafe)區塊不可使用></li></ul></li></ul></li></ul><h4 id=範例-1>範例</h4><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> foreach_yield()
 </span></span><span style=display:flex><span>{
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> dividend = <span style=color:#ae81ff>10</span>;
