@@ -1,20 +1,5 @@
 /*
- *  __                  __
- * /\ \                /\ \
- * \ \ \___   __  __   \_\ \     __
- *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
- *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
- *    \ \_\ \_\/`____ \ \___,_\ \____\
- *     \/_/\/_/`/___/> \/__,_ /\/____/
- *                /\___/
- *                \/__/
- *
- * Designed, built, and released under MIT license by @mdo. Learn more at
  * https://github.com/poole/hyde.
- */
-
-
-/*
  * Contents
  *
  * Global resets
@@ -27,24 +12,29 @@
 
 /*
  * Global resets
- *
- * Update the foundational and global aspects of the page.
  */
 
-html {
+ html {
   font-family: 'Open Sans', 'Roboto', Helvetica, Arial, sans-serif;
 }
+
 @media (min-width: 48em) {
   html {
     font-size: 16px;
   }
 }
+
 @media (min-width: 58em) {
   html {
     font-size: 20px;
   }
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 /*
  * Sidebar
@@ -56,9 +46,10 @@ html {
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   background-color: #202020;
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -66,11 +57,6 @@ html {
     left: 0;
     bottom: 0;
     width: 18rem;
-  }
-
-  footer {
-    margin-left: 19rem !important;
-    margin-right: 1rem !important;
   }
 }
 
@@ -92,70 +78,18 @@ html {
   padding-left: 0;
   list-style: none;
 }
+
 .sidebar-nav-item {
   display: block;
 }
+
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
+
 .sidebar-nav-item.active {
   font-weight: bold;
-}
-
-/* Container
- *
- * Align the contents of the site above the proper threshold with some margin-fu
- * with a 25%-wide `.sidebar`.
- */
-
-.content {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  min-height: 50%;
-}
-
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-footer {
-  font-size: .7rem;
-  text-align: center;
-  height: 40px;
-  padding: 1rem 0;
-  margin: 0 1rem;
-  border-top: 1px solid #e0e0e0;
-}
-
-
-@media (min-width: 48em) {
-  .content {
-    max-width: 40rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-    margin-bottom: -40px;
-    min-height: 100%;
-  }
-}
-
-.img-circle {
-  border-radius: 50%;
-}
-
-.img-headshot {
-  border: 6px solid #fff;
-  height: 180px;
-  width: 180px;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .sidebar {
@@ -166,6 +100,73 @@ footer {
 .sidebar a,
 .sidebar-about h1 {
   color: #fff;
+}
+
+/*
+ * Content
+ */
+
+.content {
+  padding: 1rem; /* 統一內距 */
+  min-height: 100%;
+  max-width: calc(100% - 18rem); /* 減去側邊欄寬度 */
+  margin-left: 18rem; /* 將內容推開側邊欄寬度 */
+  box-sizing: border-box; /* 避免內距影響總寬度 */
+}
+
+@media (max-width: 48em) {
+  .content {
+    max-width: 100%; /* 小螢幕滿版 */
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  font-size: .7rem;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (min-width: 48em) {
+  footer {
+    margin-left: 18rem; /* 適配側邊欄寬度 */
+    margin-right: 2rem; /* 增加右側內距 */
+  }
+}
+
+/*
+ * Images
+ */
+
+.img-circle {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-headshot {
+  border: 6px solid #fff;
+  height: 180px;
+  width: 180px;
+  max-width: 100%;
+}
+
+/*
+ * Miscellaneous
+ */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer a,
@@ -234,6 +235,10 @@ ul.posts li,
   text-decoration: none !important;
 }
 
+/*
+ * Pagination
+ */
+
 .pagination {
   justify-content: center;
   display: flex;
@@ -298,19 +303,9 @@ ul.posts li,
   border-bottom-right-radius: 4px;
 }
 
-.share-buttons {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-.share-buttons a {
-  padding: 0 0.6rem;
-}
-
-.share-buttons a:hover {
-  opacity: 0.75;
-}
+/*
+ * Tags and Share Buttons
+ */
 
 ul.tags {
   list-style: none;
@@ -335,6 +330,24 @@ a.tag-link {
 a.tag-link:hover {
   text-decoration: none;
 }
+
+.share-buttons {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.share-buttons a {
+  padding: 0 0.6rem;
+}
+
+.share-buttons a:hover {
+  opacity: 0.75;
+}
+
+/*
+ * Other Adjustments
+ */
 
 figure {
   padding: 0;
@@ -377,14 +390,14 @@ figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 
 /* 捐贈按鈕的樣式 */
 #donate-button {
   background-color: #4caf50;
   color: #ffffff;
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
