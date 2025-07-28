@@ -83,22 +83,7 @@ enableServiceWorker = true
 
   ## Set as many as you want.
   [[params.socialIcons]]
-  icon = "fa-linkedin"
-  title = "Linkedin"
-  url = "#"
-
-  [[params.socialIcons]]
-  icon = "fa-github"
-  title = "GitHub"
-  url = "https://github.com/CchMark"
-
-  [[params.socialIcons]]
-  icon = "fa-twitter"
-  title = "Twitter"
-  url = "#"
-
-  [[params.socialIcons]]
-  icon = "fas fa-envelope"
+  icon = "icon-email"
   title = "E-Mail"
   url = "mailto:markchangstart2022@gmail.com"
 

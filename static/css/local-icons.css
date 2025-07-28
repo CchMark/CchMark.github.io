@@ -1,4 +1,4 @@
-/* 本地圖標系統 - 替代 FontAwesome，避免第三方資源 */
+/* 本地圖標系統 - 電子郵件圖示 */
 
 .icon {
   display: inline-block;
@@ -6,43 +6,13 @@
   height: 1em;
   vertical-align: -0.125em;
   fill: currentColor;
-}
-
-/* SVG 圖標 */
-.icon-home::before { content: "🏠"; }
-.icon-user::before { content: "👤"; }
-.icon-email::before { content: "📧"; }
-.icon-github::before { content: "🔗"; }
-.icon-twitter::before { content: "🐦"; }
-.icon-linkedin::before { content: "💼"; }
-.icon-rss::before { content: "📡"; }
-.icon-search::before { content: "🔍"; }
-.icon-tag::before { content: "🏷️"; }
-.icon-calendar::before { content: "📅"; }
-.icon-clock::before { content: "🕒"; }
-.icon-arrow-right::before { content: "→"; }
-.icon-arrow-left::before { content: "←"; }
-.icon-external-link::before { content: "↗"; }
-
-/* 社交媒體圖標 */
-.social-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: middle;
-  margin: 0 4px;
-}
-
-/* 使用 Unicode 字符的圖標 */
-.unicode-icon {
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
+  font-size: inherit;
   line-height: 1;
+  text-align: center;
 }
+
+/* 電子郵件圖標 */
+.icon-email::before { content: "📧"; }
 
 /* 深色模式圖標調整 */
 @media (prefers-color-scheme: dark) {
@@ -51,24 +21,48 @@
   }
 }
 
-/* 響應式圖標大小 */
-.icon-sm { font-size: 0.875rem; }
-.icon-lg { font-size: 1.25rem; }
-.icon-xl { font-size: 1.5rem; }
-
-/* 圖標動畫 */
-.icon-spin {
-  animation: icon-spin 1s linear infinite;
+/* 側邊欄社交圖標特殊樣式 - 使用更高優先級選擇器 */
+.sidebar .social-icons .icon {
+  font-size: 1.5rem !important;
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  line-height: 1;
 }
 
-@keyframes icon-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.sidebar .social-icons a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem !important;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08) !important;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  color: inherit;
+  width: 3rem;
+  height: 3rem;
 }
 
-/* 圖標顏色變體 */
-.icon-primary { color: #007cba; }
-.icon-secondary { color: #6c757d; }
-.icon-success { color: #28a745; }
-.icon-warning { color: #ffc107; }
-.icon-danger { color: #dc3545; }
+.sidebar .social-icons a:hover {
+  transform: scale(1.1) !important;
+  background: rgba(255,255,255,0.15) !important;
+  color: #ffe082 !important;
+}
+
+.sidebar .social-icons a:hover .icon {
+  transform: none; /* 避免雙重縮放 */
+}
+
+/* 分享按鈕圖標樣式 */
+.share-buttons .icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.share-buttons a:hover .icon {
+  transform: scale(1.1);
+}
