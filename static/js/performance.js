@@ -9,7 +9,9 @@
 
   // Service Worker 註冊
   function registerServiceWorker() {
-    if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+    if ('serviceWorker' in navigator && 
+        window.location.protocol === 'https:' && 
+        window.location.hostname !== 'localhost') {
       window.addEventListener('load', async () => {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');

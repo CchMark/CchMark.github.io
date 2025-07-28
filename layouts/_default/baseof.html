@@ -120,30 +120,30 @@
 
       // 當頁面載入完成後再載入非關鍵腳本
       window.addEventListener('load', async function() {
+        const scriptsToLoad = [
+          '{{ `js/jquery.min.js` | relURL }}',
+          '{{ `js/performance.js` | relURL }}',
+          '{{ `js/analytics.js` | relURL }}',
+          '{{ `js/soho.js` | relURL }}',
+          '{{ `js/theme-toggle.js` | relURL }}'
+        ];
+        
         try {
-          // 載入效能優化腳本
-          await loadScript('{{ `js/performance.js` | relURL }}');
-          
-          // 載入隱私友好分析腳本
-          await loadScript('{{ `js/analytics.js` | relURL }}');
-          
-          // jQuery 延遲載入
-          await loadScript('{{ `js/jquery.min.js` | relURL }}');
-          
-          // jQuery 依賴腳本
-          await Promise.all([
-            loadScript('{{ `js/soho.js` | relURL }}'),
-            loadScript('{{ `js/theme-toggle.js` | relURL }}')
-          ]);
+          // 順序載入腳本
+          for (const script of scriptsToLoad) {
+            await loadScript(script);
+            // 等待腳本執行完成
+            await new Promise(resolve => setTimeout(resolve, 50));
+          }
 
-          // FontAwesome JS - 延遲載入，確保 HTTPS 和 integrity
+          // FontAwesome JS - 最後載入
           await loadScript(
             'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js',
             null,
             'sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=='
           );
         } catch (error) {
-          console.warn('Script loading failed:', error);
+          console.warn('Script loading failed:', error.message);
         }
       });
     })();

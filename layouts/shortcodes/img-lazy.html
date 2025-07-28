@@ -9,9 +9,10 @@
 {{ $width := .Get "width" }}
 {{ $height := .Get "height" }}
 
-{{/* 嘗試處理圖片資源 */}}
-{{ $image := "" }}
-{{ if (fileExists (printf "static/%s" $src)) }}
+{{/* 安全地嘗試處理圖片資源 */}}
+{{ $image := false }}
+{{ $staticPath := printf "static/%s" $src }}
+{{ if (fileExists $staticPath) }}
   {{ $image = resources.Get $src }}
 {{ end }}
 
@@ -31,7 +32,7 @@
            loading="lazy"
            decoding="async">
     </picture>
-    {{ if $alt }}
+    {{ if ne $alt "圖片" }}
     <figcaption class="sr-only">{{ $alt }}</figcaption>
     {{ end }}
   </figure>
@@ -45,7 +46,7 @@
          {{ with $height }}height="{{ . }}"{{ end }}
          loading="lazy"
          decoding="async">
-    {{ if $alt }}
+    {{ if ne $alt "圖片" }}
     <figcaption class="sr-only">{{ $alt }}</figcaption>
     {{ end }}
   </figure>

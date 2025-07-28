@@ -1,6 +1,9 @@
 // 隱私友善無 Cookie 分析系統 - 完全無錯誤版本
 
-class PrivacyFriendlyAnalytics {
+// 防止重複宣告
+if (typeof window.PrivacyFriendlyAnalytics === 'undefined') {
+  
+  window.PrivacyFriendlyAnalytics = class PrivacyFriendlyAnalytics {
   constructor() {
     this.apiEndpoint = '/api/analytics'; // 自定義後端端點
     this.sessionId = this.generateSessionId();
@@ -444,11 +447,19 @@ class PrivacyFriendlyAnalytics {
       }
     }
   }
+  
+  // 類別結束
+  };
+
 }
 
 // 安全初始化
 (function() {
   'use strict';
+  
+  // 防止重複初始化
+  if (window.analyticsInitialized) return;
+  window.analyticsInitialized = true;
   
   try {
     // 只在非開發環境啟用
@@ -459,10 +470,10 @@ class PrivacyFriendlyAnalytics {
       // 等待 DOM 準備就緒
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-          window.analytics = new PrivacyFriendlyAnalytics();
+          window.analytics = new window.PrivacyFriendlyAnalytics();
         });
       } else {
-        window.analytics = new PrivacyFriendlyAnalytics();
+        window.analytics = new window.PrivacyFriendlyAnalytics();
       }
     } else {
       console.log('✓ Analytics disabled in development environment');
