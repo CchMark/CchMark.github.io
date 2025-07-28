@@ -34,6 +34,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden; /* 禁止橫向滾動條 */
 }
 
 /*
@@ -109,9 +110,10 @@ a.sidebar-nav-item:focus {
 .content {
   padding: 1rem; /* 統一內距 */
   min-height: 100%;
-  max-width: calc(100% - 18rem); /* 減去側邊欄寬度 */
+  max-width: calc(100vw - 18rem); /* 避免內容超出視窗 */
   margin-left: 18rem; /* 將內容推開側邊欄寬度 */
   box-sizing: border-box; /* 避免內距影響總寬度 */
+  overflow-x: visible; /* 避免橫向滾動條 */
 }
 
 @media (max-width: 48em) {
