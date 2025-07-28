@@ -26,9 +26,9 @@ if (typeof window.PrivacyFriendlyAnalytics === 'undefined') {
 
   async safeInit() {
     try {
-      // 檢查 Do Not Track 設定
-      if (this.isTrackingDisabled()) {
-        console.log('✓ Analytics disabled due to privacy settings');
+      // 檢查 Do Not Track 設定和 Cookie 同意
+      if (this.isTrackingDisabled() || !this.hasCookieConsent()) {
+        console.log('✓ Analytics disabled due to privacy settings or lack of consent');
         return;
       }
 
@@ -49,6 +49,15 @@ if (typeof window.PrivacyFriendlyAnalytics === 'undefined') {
       return navigator.doNotTrack === '1' || 
              window.doNotTrack === '1' || 
              navigator.msDoNotTrack === '1';
+    } catch (error) {
+      return false;
+    }
+  }
+
+  hasCookieConsent() {
+    try {
+      // 檢查 Cookie 同意狀態
+      return window.CookieManager && window.CookieManager.hasConsent();
     } catch (error) {
       return false;
     }

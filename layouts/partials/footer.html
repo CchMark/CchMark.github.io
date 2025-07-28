@@ -1,4 +1,51 @@
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer>
+  <div>
+    <p>
+      &copy; {{ $.Site.Params.Copyright }} {{ now.Format "2006"}}
+
+      {{ with $.Site.Params.License -}}
+      &middot; <a href="{{ $.Site.Params.licenseURL }}" target="_blank">{{ . | safeHTML }}</a>
+      {{- end }}
+
+      {{ with $.Site.Params.BuiltWith -}}
+      &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+      {{- end }}
+      
+      <!-- 隱私友好的瀏覽統計 - 無第三方 Cookie -->
+      <span id="privacy-pageview-counter">
+        <noscript>感謝您的訪問！</noscript>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<!-- 隱私友好的頁面統計腳本 -->
+<script>
+(function() {
+  'use strict';
+  
+  // 簡單的頁面瀏覽統計，不使用 Cookie 或第三方服務
+  function initPrivacyCounter() {
+    const counter = document.getElementById('privacy-pageview-counter');
+    if (!counter) return;
+    
+    // 使用 sessionStorage 來追蹤此次瀏覽，不會跨瀏覽器會話
+    const sessionKey = 'privacy-view-count';
+    let viewCount = parseInt(sessionStorage.getItem(sessionKey) || '0') + 1;
+    sessionStorage.setItem(sessionKey, viewCount.toString());
+    
+    // 顯示本次會話的瀏覽次數
+    counter.innerHTML = `本次訪問第 <span style="color: #007cba;">${viewCount}</span> 頁`;
+  }
+  
+  // 當 DOM 準備好時初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPrivacyCounter);
+  } else {
+    initPrivacyCounter();
+  }
+})();
+</script>//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <footer>
   <div>
     <p>

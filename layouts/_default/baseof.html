@@ -25,11 +25,9 @@
 
   {{ partial "seo.html" . }}
 
-  <!-- 預載入關鍵 DNS - 全部使用 HTTPS -->
+  <!-- 預載入關鍵 DNS - 只保留必要的 -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
   <!-- 關鍵 CSS - 內聯載入以減少 TTFB -->
   {{ partial "critical-css.html" . }}
@@ -43,6 +41,18 @@
 
   <link rel="preload" as="style" href="{{ `css/responsive-images.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ `css/responsive-images.css` | relURL }}"></noscript>
+
+  <!-- 修復標題字體大小問題 -->
+  <link rel="preload" as="style" href="{{ `css/heading-fix.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/heading-fix.css` | relURL }}"></noscript>
+
+  <!-- 本地圖標系統，替代 FontAwesome -->
+  <link rel="preload" as="style" href="{{ `css/local-icons.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/local-icons.css` | relURL }}"></noscript>
+
+  <!-- 本地圖標系統，替代 FontAwesome -->
+  <link rel="preload" as="style" href="{{ `css/local-icons.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/local-icons.css` | relURL }}"></noscript>
 
   <link type="text/css"
         rel="stylesheet"
@@ -60,12 +70,6 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap">
-  </noscript>
-
-  <!-- FontAwesome - 延遲載入，確保 HTTPS -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
   </noscript>
 
   <link rel="apple-touch-icon-precomposed"
@@ -122,6 +126,7 @@
       window.addEventListener('load', async function() {
         const scriptsToLoad = [
           '{{ `js/jquery.min.js` | relURL }}',
+          '{{ `js/cookie-compliance.js` | relURL }}',
           '{{ `js/performance.js` | relURL }}',
           '{{ `js/analytics.js` | relURL }}',
           '{{ `js/soho.js` | relURL }}',
@@ -136,12 +141,8 @@
             await new Promise(resolve => setTimeout(resolve, 50));
           }
 
-          // FontAwesome JS - 最後載入
-          await loadScript(
-            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js',
-            null,
-            'sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=='
-          );
+          // 只載入必要的腳本，不載入第三方 JS
+          console.log('✓ All essential scripts loaded successfully');
         } catch (error) {
           console.warn('Script loading failed:', error.message);
         }

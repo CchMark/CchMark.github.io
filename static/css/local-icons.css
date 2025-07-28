@@ -1,0 +1,74 @@
+/* 本地圖標系統 - 替代 FontAwesome，避免第三方資源 */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+/* SVG 圖標 */
+.icon-home::before { content: "🏠"; }
+.icon-user::before { content: "👤"; }
+.icon-email::before { content: "📧"; }
+.icon-github::before { content: "🔗"; }
+.icon-twitter::before { content: "🐦"; }
+.icon-linkedin::before { content: "💼"; }
+.icon-rss::before { content: "📡"; }
+.icon-search::before { content: "🔍"; }
+.icon-tag::before { content: "🏷️"; }
+.icon-calendar::before { content: "📅"; }
+.icon-clock::before { content: "🕒"; }
+.icon-arrow-right::before { content: "→"; }
+.icon-arrow-left::before { content: "←"; }
+.icon-external-link::before { content: "↗"; }
+
+/* 社交媒體圖標 */
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+/* 使用 Unicode 字符的圖標 */
+.unicode-icon {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* 深色模式圖標調整 */
+@media (prefers-color-scheme: dark) {
+  .icon {
+    filter: brightness(0.9);
+  }
+}
+
+/* 響應式圖標大小 */
+.icon-sm { font-size: 0.875rem; }
+.icon-lg { font-size: 1.25rem; }
+.icon-xl { font-size: 1.5rem; }
+
+/* 圖標動畫 */
+.icon-spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+@keyframes icon-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 圖標顏色變體 */
+.icon-primary { color: #007cba; }
+.icon-secondary { color: #6c757d; }
+.icon-success { color: #28a745; }
+.icon-warning { color: #ffc107; }
+.icon-danger { color: #dc3545; }
