@@ -35,6 +35,91 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden; /* 禁止橫向滾動條 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 深色模式變數 */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --content-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-light: rgba(0,0,0,0.08);
+  --shadow-medium: rgba(0,0,0,0.06);
+  --post-date-color: #888;
+}
+
+/* 手動深色模式 */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --content-bg: #1e1e1e;
+  --border-color: #333333;
+  --shadow-light: rgba(0,0,0,0.15);
+  --shadow-medium: rgba(0,0,0,0.1);
+  --post-date-color: #b0b0b0;
+}
+
+/* 自動深色模式（當沒有手動設定時） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --content-bg: #1e1e1e;
+    --border-color: #333333;
+    --shadow-light: rgba(0,0,0,0.15);
+    --shadow-medium: rgba(0,0,0,0.1);
+    --post-date-color: #b0b0b0;
+  }
+}
+
+/* 深色模式切換按鈕 */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--content-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px 0 var(--shadow-medium);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px 0 var(--shadow-light);
+}
+
+@media (max-width: 48em) {
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* 確保 body 背景色切換 */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme]) {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
 }
 
 /*
@@ -123,26 +208,31 @@ a.sidebar-nav-item:focus {
   margin-left: 18rem; /* 將內容推開側邊欄寬度 */
   box-sizing: border-box; /* 避免內距影響總寬度 */
   overflow-x: visible; /* 避免橫向滾動條 */
-  background: #fff;
+  background: var(--content-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px 0 var(--shadow-light);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 .post {
   padding: 2rem 2.5rem;
-  background: #fff;
+  background: var(--content-bg);
   border-radius: 12px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px 0 var(--shadow-medium);
   margin-bottom: 2.5rem;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 .post-date {
   margin-bottom: 1.5rem;
-  color: #888;
+  color: var(--post-date-color);
   font-size: 1rem;
 }
 .post h1.title {
   margin-bottom: 0.5rem;
   font-size: 2.2rem;
   font-weight: 700;
+  color: var(--text-color);
 }
 .tagline {
   display: block;
@@ -160,12 +250,16 @@ a.sidebar-nav-item:focus {
     padding: 1.5rem;
     border-radius: 0;
     box-shadow: none;
+    background: var(--content-bg);
+    color: var(--text-color);
   }
   
   .post {
     padding: 1.5rem;
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 1px 6px 0 var(--shadow-medium);
     margin-bottom: 1.5rem;
+    background: var(--content-bg);
+    color: var(--text-color);
   }
 }
 
@@ -179,9 +273,12 @@ footer {
   padding: 1rem 0;
   width: 100%;
   box-sizing: border-box;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
   word-wrap: break-word;
   overflow-wrap: break-word;
+  background: var(--content-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 footer p {
@@ -217,6 +314,156 @@ footer span#busuanzi_container_site_uv {
     margin-top: 0.5rem;
   }
 }
+
+/* 深色模式下的側邊欄與元件優化 */
+[data-theme="dark"] .sidebar {
+  background-color: #1a1a1a;
+  box-shadow: 2px 0 8px 0 rgba(0,0,0,0.2);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+[data-theme="dark"] .sidebar a:hover {
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .social-icons a:hover {
+  color: #fbbf24;
+  background: rgba(251,191,36,0.1);
+}
+
+[data-theme="dark"] a.tag-link {
+  background-color: #2a2a2a;
+  color: #d1d5db !important;
+  box-shadow: none;
+}
+
+[data-theme="dark"] a.tag-link:hover {
+  background-color: #374151;
+  transform: none;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .read-more-link a {
+  background: #2a2a2a;
+  color: #d1d5db;
+  border: 1px solid #3a3a3a;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .read-more-link a:hover {
+  background: #374151;
+  color: #e5e7eb;
+  border: 1px solid #4b5563;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .pagination li a {
+  color: #d1d5db;
+  border: 1px solid #3a3a3a;
+  background: #2a2a2a;
+}
+
+[data-theme="dark"] .pagination li a:hover {
+  color: #1a1a1a;
+  background-color: #d1d5db;
+}
+
+[data-theme="dark"] .pagination li.active a {
+  color: #1a1a1a;
+  background-color: #d1d5db;
+}
+
+[data-theme="dark"] .content {
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+[data-theme="dark"] .post {
+  box-shadow: none;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+}
+
+[data-theme="dark"] footer {
+  border-top: 1px solid #2a2a2a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .sidebar {
+    background-color: #1a1a1a;
+    box-shadow: 2px 0 8px 0 rgba(0,0,0,0.2);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  :root:not([data-theme]) .sidebar a:hover {
+    color: #fbbf24;
+  }
+  
+  :root:not([data-theme]) .social-icons a:hover {
+    color: #fbbf24;
+    background: rgba(251,191,36,0.1);
+  }
+  
+  :root:not([data-theme]) a.tag-link {
+    background-color: #2a2a2a;
+    color: #d1d5db !important;
+    box-shadow: none;
+  }
+  
+  :root:not([data-theme]) a.tag-link:hover {
+    background-color: #374151;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  :root:not([data-theme]) .read-more-link a {
+    background: #2a2a2a;
+    color: #d1d5db;
+    border: 1px solid #3a3a3a;
+    box-shadow: none;
+  }
+  
+  :root:not([data-theme]) .read-more-link a:hover {
+    background: #374151;
+    color: #e5e7eb;
+    border: 1px solid #4b5563;
+    box-shadow: none;
+  }
+  
+  :root:not([data-theme]) .pagination li a {
+    color: #d1d5db;
+    border: 1px solid #3a3a3a;
+    background: #2a2a2a;
+  }
+  
+  :root:not([data-theme]) .pagination li a:hover {
+    color: #1a1a1a;
+    background-color: #d1d5db;
+  }
+  
+  :root:not([data-theme]) .pagination li.active a {
+    color: #1a1a1a;
+    background-color: #d1d5db;
+  }
+  
+  :root:not([data-theme]) .content {
+    box-shadow: none;
+    border-radius: 8px;
+  }
+  
+  :root:not([data-theme]) .post {
+    box-shadow: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+  }
+  
+  :root:not([data-theme]) footer {
+    border-top: 1px solid #2a2a2a;
+  }
+}
+/* 深色模式下的側邊欄與元件優化 */
 
 /*
  * Images
