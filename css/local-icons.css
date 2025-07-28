@@ -1,0 +1,68 @@
+/* 本地圖標系統 - 電子郵件圖示 */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  font-size: inherit;
+  line-height: 1;
+  text-align: center;
+}
+
+/* 電子郵件圖標 */
+.icon-email::before { content: "📧"; }
+
+/* 深色模式圖標調整 */
+@media (prefers-color-scheme: dark) {
+  .icon {
+    filter: brightness(0.9);
+  }
+}
+
+/* 側邊欄社交圖標特殊樣式 - 使用更高優先級選擇器 */
+.sidebar .social-icons .icon {
+  font-size: 1.5rem !important;
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.sidebar .social-icons a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem !important;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08) !important;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  color: inherit;
+  width: 3rem;
+  height: 3rem;
+}
+
+.sidebar .social-icons a:hover {
+  transform: scale(1.1) !important;
+  background: rgba(255,255,255,0.15) !important;
+  color: #ffe082 !important;
+}
+
+.sidebar .social-icons a:hover .icon {
+  transform: none; /* 避免雙重縮放 */
+}
+
+/* 分享按鈕圖標樣式 */
+.share-buttons .icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.share-buttons a:hover .icon {
+  transform: scale(1.1);
+}
