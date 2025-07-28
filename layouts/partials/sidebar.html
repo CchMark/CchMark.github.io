@@ -4,14 +4,14 @@
       {{ with .Site.Params.gravatar }}
       <div class="author-image">
         <a href="{{ $.Site.BaseURL }}">
-          <img src="https://www.gravatar.com/avatar/{{md5 .}}?s=200&d=mp" class="img-circle img-headshot center" alt="Gravatar">
+          <img src="https://www.gravatar.com/avatar/{{md5 .}}?s=200&d=mp" class="img-circle img-headshot center" alt="Gravatar" loading="lazy">
         </a>
       </div>
       {{ else }}
         {{ with .Site.Params.profilePicture }}
         <div class="author-image">
           <a href="{{ $.Site.BaseURL }}">
-            <img src="{{ . | relURL }}" class="img-circle img-headshot center" alt="Profile Picture">
+            <img src="{{ . | relURL }}" class="img-circle img-headshot center" alt="Profile Picture" loading="lazy">
           </a>
         </div>
         {{ end }}
