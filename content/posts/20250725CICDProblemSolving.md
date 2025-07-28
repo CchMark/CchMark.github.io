@@ -50,7 +50,7 @@ categories: [技術筆記]
 ---
 
 
-![CI/CD pipeline 失敗示意圖](../../static/images/GoogleSheetFile/2025-07-25-cicd-fail-demo.png)
+![CI/CD pipeline 失敗示意圖](../../static/images/CICDFile/2025-07-25-cicd-fail-demo.png)
 
 ▲ 這是當時 pipeline 失敗的畫面，release 階段 dev_release job 沒通過，build/analysis 都正常。
 
