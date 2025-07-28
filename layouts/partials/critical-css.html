@@ -53,6 +53,22 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* 延遲載入動畫 */
@@ -111,6 +127,12 @@ img {
   
   .sidebar {
     transition: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 </style>

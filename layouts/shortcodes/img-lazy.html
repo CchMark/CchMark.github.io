@@ -21,24 +21,27 @@
   {{ $webp := $image.Resize "800x webp q85" }}
   {{ $jpeg := $image.Resize "800x jpeg q85" }}
   
-  <picture class="{{ $class }}" style="aspect-ratio: {{ $aspectRatio }}; max-width: 100%; height: auto;">
-    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-    <img src="{{ $jpeg.RelPermalink }}" 
-         alt="{{ $alt }}" 
-         {{ with $width }}width="{{ . }}"{{ end }}
-         {{ with $height }}height="{{ . }}"{{ end }}
-         style="width: 100%; height: 100%; object-fit: contain; object-position: center;"
-         loading="lazy"
-         decoding="async">
-  </picture>
+  <div class="img-container {{ $class }}" {{ if ne $aspectRatio "auto" }}style="aspect-ratio: {{ $aspectRatio }};"{{ end }}>
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+      <img src="{{ $jpeg.RelPermalink }}" 
+           alt="{{ $alt }}" 
+           {{ with $width }}width="{{ . }}"{{ end }}
+           {{ with $height }}height="{{ . }}"{{ end }}
+           class="responsive-img"
+           loading="lazy"
+           decoding="async">
+    </picture>
+  </div>
 {{ else }}
   {{/* 如果找不到圖片資源，使用原始路徑 */}}
-  <img src="{{ $src | relURL }}" 
-       alt="{{ $alt }}" 
-       class="{{ $class }}"
-       {{ with $width }}width="{{ . }}"{{ end }}
-       {{ with $height }}height="{{ . }}"{{ end }}
-       style="max-width: 100%; height: auto; aspect-ratio: {{ $aspectRatio }}; object-fit: contain;"
-       loading="lazy"
-       decoding="async">
+  <div class="img-container {{ $class }}" {{ if ne $aspectRatio "auto" }}style="aspect-ratio: {{ $aspectRatio }};"{{ end }}>
+    <img src="{{ $src | relURL }}" 
+         alt="{{ $alt }}" 
+         class="responsive-img"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         loading="lazy"
+         decoding="async">
+  </div>
 {{ end }}

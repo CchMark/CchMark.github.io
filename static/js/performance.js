@@ -1,13 +1,13 @@
-// 現代化效能優化腳本 - 移除舊 API，使用現代標準
+// 現代化效能優化腳本 - 移除棄用 API，使用最新標準
 
 // Service Worker 註冊
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('SW registered: ', registration);
+      console.log('SW registered successfully:', registration.scope);
     } catch (registrationError) {
-      console.log('SW registration failed: ', registrationError);
+      console.warn('SW registration failed:', registrationError);
     }
   });
 }
@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 document.addEventListener('DOMContentLoaded', () => {
   // 使用現代 Intersection Observer API
   if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
@@ -62,22 +62,22 @@ const prefetchLinks = () => {
     // 使用 requestIdleCallback 優化效能
     requestIdleCallback(() => {
       links.forEach(link => {
-        link.addEventListener('mouseenter', prefetchOnHover, { once: true });
-        link.addEventListener('touchstart', prefetchOnHover, { once: true });
+        link.addEventListener('mouseenter', prefetchOnHover, { once: true, passive: true });
+        link.addEventListener('touchstart', prefetchOnHover, { once: true, passive: true });
       });
     });
   } else {
     // Fallback
     setTimeout(() => {
       links.forEach(link => {
-        link.addEventListener('mouseenter', prefetchOnHover, { once: true });
+        link.addEventListener('mouseenter', prefetchOnHover, { once: true, passive: true });
       });
     }, 1000);
   }
 };
 
 const prefetchOnHover = (event) => {
-  const href = event.target.getAttribute('href');
+  const href = event.target.closest('a')?.getAttribute('href');
   if (href && !document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
     const prefetchLink = document.createElement('link');
     prefetchLink.rel = 'prefetch';
@@ -87,57 +87,90 @@ const prefetchOnHover = (event) => {
   }
 };
 
-// 效能監控
+// 效能監控 - 使用最新 API
 const performanceMonitor = () => {
   if ('PerformanceObserver' in window) {
-    // 監控 Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // 監控 First Input Delay
-    const fidObserver = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      entries.forEach(entry => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+    try {
+      // 監控 Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', Math.round(lastEntry.startTime), 'ms');
       });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // 監控 Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((entryList) => {
+      // 監控 First Input Delay
+      const fidObserver = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        entries.forEach(entry => {
+          console.log('FID:', Math.round(entry.processingStart - entry.startTime), 'ms');
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // 監控 Cumulative Layout Shift
       let clsValue = 0;
-      const entries = entryList.getEntries();
-      entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
-        }
+      const clsObserver = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        entries.forEach(entry => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        console.log('CLS:', clsValue.toFixed(4));
       });
-      console.log('CLS:', clsValue);
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Performance monitoring setup failed:', error);
+    }
   }
 };
 
 // 安全的第三方資源載入
 const loadThirdPartyResources = () => {
-  // 延遲載入 Google Analytics（如果需要）
+  // 延遲載入分析腳本（如果需要）
   window.addEventListener('load', () => {
-    if (window.gtag) {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        anonymize_ip: true,
-        cookie_flags: 'SameSite=Strict;Secure'
-      });
+    // 檢查是否有 Google Analytics
+    if (typeof gtag !== 'undefined') {
+      try {
+        gtag('config', 'GA_MEASUREMENT_ID', {
+          anonymize_ip: true,
+          cookie_flags: 'SameSite=Strict;Secure',
+          storage: 'none'
+        });
+      } catch (error) {
+        console.warn('Analytics configuration failed:', error);
+      }
     }
   });
 };
 
+// 錯誤處理和報告
+const setupErrorHandling = () => {
+  window.addEventListener('error', (event) => {
+    console.error('JavaScript Error:', {
+      message: event.message,
+      filename: event.filename,
+      line: event.lineno,
+      column: event.colno,
+      error: event.error
+    });
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    console.error('Unhandled Promise Rejection:', event.reason);
+  });
+};
+
 // 初始化
-window.addEventListener('load', () => {
-  prefetchLinks();
-  performanceMonitor();
-  loadThirdPartyResources();
-});
+try {
+  setupErrorHandling();
+  
+  window.addEventListener('load', () => {
+    prefetchLinks();
+    performanceMonitor();
+    loadThirdPartyResources();
+  });
+} catch (error) {
+  console.error('Performance script initialization failed:', error);
+}

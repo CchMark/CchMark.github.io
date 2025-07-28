@@ -90,43 +90,84 @@
 
   <!-- 延遲載入 JavaScript - 移除舊 API，使用現代標準 -->
   <script>
-    // 現代化腳本載入器
-    function loadScript(src, callback, integrity = null) {
-      const script = document.createElement('script');
-      script.src = src;
-      if (integrity) {
-        script.integrity = integrity;
-        script.crossOrigin = 'anonymous';
+    (function() {
+      'use strict';
+      
+      // 避免重複定義
+      if (window.modernScriptLoader) return;
+      window.modernScriptLoader = true;
+
+      // 現代化腳本載入器
+      function loadScript(src, callback, integrity = null) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          if (integrity) {
+            script.integrity = integrity;
+            script.crossOrigin = 'anonymous';
+          }
+          script.onload = () => {
+            if (callback) callback();
+            resolve();
+          };
+          script.onerror = () => {
+            console.error('Failed to load script:', src);
+            reject(new Error(`Script load failed: ${src}`));
+          };
+          document.head.appendChild(script);
+        });
       }
-      script.onload = callback;
-      script.onerror = () => console.error('Failed to load script:', src);
-      document.head.appendChild(script);
-    }
 
-    // 當頁面載入完成後再載入非關鍵腳本
-    window.addEventListener('load', function() {
-      // 載入效能優化腳本
-      loadScript('{{ `js/performance.js` | relURL }}');
-      
-      // 載入隱私友好分析腳本
-      loadScript('{{ `js/analytics.js` | relURL }}');
-      
-      // jQuery 延遲載入
-      loadScript('{{ `js/jquery.min.js` | relURL }}', function() {
-        // jQuery 載入完成後載入其他依賴腳本
-        loadScript('{{ `js/soho.js` | relURL }}');
-        loadScript('{{ `js/theme-toggle.js` | relURL }}');
+      // 當頁面載入完成後再載入非關鍵腳本
+      window.addEventListener('load', async function() {
+        try {
+          // 載入效能優化腳本
+          await loadScript('{{ `js/performance.js` | relURL }}');
+          
+          // 載入隱私友好分析腳本
+          await loadScript('{{ `js/analytics.js` | relURL }}');
+          
+          // jQuery 延遲載入
+          await loadScript('{{ `js/jquery.min.js` | relURL }}');
+          
+          // jQuery 依賴腳本
+          await Promise.all([
+            loadScript('{{ `js/soho.js` | relURL }}'),
+            loadScript('{{ `js/theme-toggle.js` | relURL }}')
+          ]);
+
+          // FontAwesome JS - 延遲載入，確保 HTTPS 和 integrity
+          await loadScript(
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js',
+            null,
+            'sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=='
+          );
+        } catch (error) {
+          console.warn('Script loading failed:', error);
+        }
       });
-
-      // FontAwesome JS - 延遲載入，確保 HTTPS 和 integrity
-      loadScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js', null, 'sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==');
-    });
+    })();
   </script>
 
   {{ range $.Site.Params.customJs -}}
   <script>
-    window.addEventListener('load', function() {
-      loadScript('{{ . | relURL }}');
+    window.addEventListener('load', async function() {
+      try {
+        if (window.modernScriptLoader) {
+          const loadScript = function(src) {
+            return new Promise((resolve, reject) => {
+              const script = document.createElement('script');
+              script.src = src;
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.appendChild(script);
+            });
+          };
+          await loadScript('{{ . | relURL }}');
+        }
+      } catch (error) {
+        console.warn('Custom script loading failed:', error);
+      }
     });
   </script>
   {{- end}}
