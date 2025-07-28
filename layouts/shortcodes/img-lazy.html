@@ -1,14 +1,13 @@
 {{/* 
-  優化圖片載入的 shortcode - 確保圖片不變形
-  使用方式: {{< img-lazy src="images/example.jpg" alt="描述文字" class="可選的CSS類別" width="寬度" height="高度" >}}
+  優化圖片載入的 shortcode - 確保圖片保持原始比例，絕不變形
+  使用方式: {{< img-lazy src="images/example.jpg" alt="描述文字" class="可選的CSS類別" >}}
 */}}
 
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "圖片" }}
-{{ $class := .Get "class" | default "responsive-img" }}
+{{ $class := .Get "class" | default "" }}
 {{ $width := .Get "width" }}
 {{ $height := .Get "height" }}
-{{ $aspectRatio := .Get "aspect-ratio" | default "auto" }}
 
 {{/* 嘗試處理圖片資源 */}}
 {{ $image := "" }}
@@ -21,7 +20,7 @@
   {{ $webp := $image.Resize "800x webp q85" }}
   {{ $jpeg := $image.Resize "800x jpeg q85" }}
   
-  <div class="img-container {{ $class }}" {{ if ne $aspectRatio "auto" }}style="aspect-ratio: {{ $aspectRatio }};"{{ end }}>
+  <figure class="img-container {{ $class }}">
     <picture>
       <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
       <img src="{{ $jpeg.RelPermalink }}" 
@@ -32,10 +31,13 @@
            loading="lazy"
            decoding="async">
     </picture>
-  </div>
+    {{ if $alt }}
+    <figcaption class="sr-only">{{ $alt }}</figcaption>
+    {{ end }}
+  </figure>
 {{ else }}
   {{/* 如果找不到圖片資源，使用原始路徑 */}}
-  <div class="img-container {{ $class }}" {{ if ne $aspectRatio "auto" }}style="aspect-ratio: {{ $aspectRatio }};"{{ end }}>
+  <figure class="img-container {{ $class }}">
     <img src="{{ $src | relURL }}" 
          alt="{{ $alt }}" 
          class="responsive-img"
@@ -43,5 +45,8 @@
          {{ with $height }}height="{{ . }}"{{ end }}
          loading="lazy"
          decoding="async">
-  </div>
+    {{ if $alt }}
+    <figcaption class="sr-only">{{ $alt }}</figcaption>
+    {{ end }}
+  </figure>
 {{ end }}

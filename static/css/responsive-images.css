@@ -1,47 +1,91 @@
-/* 響應式圖片樣式 - 確保圖片不變形 */
+/* 響應式圖片樣式 - 確保圖片不變形，永不強制拉伸 */
+
+/* 全域圖片重置 - 確保所有圖片都不會變形 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
 
 /* 基礎響應式圖片 */
 .responsive-img {
   max-width: 100%;
-  height: auto;
+  height: auto !important;
+  width: auto !important;
   display: block;
   margin: 0 auto;
   object-fit: contain;
   object-position: center;
 }
 
-/* 圖片容器 */
+/* 圖片容器 - 不強制固定高度 */
 .img-container {
   position: relative;
-  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  height: auto;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .img-container img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto !important;
+  width: auto !important;
   object-fit: contain;
   object-position: center;
+  display: block;
 }
 
-/* 保持長寬比的圖片容器 */
-.img-container[style*="aspect-ratio"] {
-  width: 100%;
-  height: 0;
+/* 文章內圖片樣式 */
+.content img,
+.post img,
+article img {
+  max-width: 100%;
+  height: auto !important;
+  width: auto !important;
+  margin: 1rem auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 頭像圖片 */
+.avatar,
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 縮略圖 */
+.thumbnail {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* 只有在明確設定 aspect-ratio 時才使用固定比例 */
+.fixed-aspect-ratio {
   position: relative;
   overflow: hidden;
 }
 
-.img-container[style*="aspect-ratio"] img {
+.fixed-aspect-ratio img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
