@@ -1,4 +1,4 @@
-# 網站網址
+# 網站網址 - 強制 HTTPS
 baseURL = "https://cchmark.github.io"
 # 網站名稱
 title = "The Mark Chang Life"
@@ -11,6 +11,50 @@ paginate = 5
 ignoreErrors = ["error-remote-getjson"]
 # Disqus 留言板
 disqusShortname = "https://cchmark.github.io"
+
+# 效能優化設定
+enableGitInfo = false
+enableRobotsTXT = true
+canonifyURLs = true
+relativeURLs = false
+
+# 安全性設定
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+# 圖片處理優化
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# 壓縮設定
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      precision = 0
+    [minify.tdewolff.html]
+      keepDocumentTags = true
+      keepDefaultAttrVals = true
+      keepEndTags = true
+      keepWhitespace = false
+    [minify.tdewolff.js]
+      precision = 0
 
 [params]
 author = "Mark_Chang"
@@ -29,8 +73,13 @@ copyright = "Mark_Chang  All rights reserved."
 # themeColor = "#fc2803"
 
 ## Set custom CSS and/or JS to override site defaults.
-customCss = ["css/hyde.css"]
-customJs = ["js/soho.js"]
+customCss = ["css/hyde.css", "css/responsive-images.css"]
+customJs = ["js/soho.js", "js/performance.js", "js/analytics.js"]
+
+# 效能優化參數
+enableGitInfo = false
+enableRobotsTXT = true
+enableServiceWorker = true
 
   ## Set as many as you want.
   [[params.socialIcons]]

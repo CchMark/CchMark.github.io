@@ -1,0 +1,61 @@
+{{/* 
+  安全標頭 - 包含 CSP、HSTS、COOP、XFO 等安全設定
+*/}}
+
+<!-- 內容安全政策 (CSP) -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self' https:;
+  script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+  img-src 'self' data: https: blob:;
+  connect-src 'self' https://www.google-analytics.com;
+  frame-ancestors 'none';
+  base-uri 'self';
+  form-action 'self';
+  upgrade-insecure-requests;
+">
+
+<!-- 嚴格傳輸安全 (HSTS) -->
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+<!-- 跨來源嵌入政策 (COEP) -->
+<meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+
+<!-- 跨來源開啟政策 (COOP) -->
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<!-- 跨來源資源政策 (CORP) -->
+<meta http-equiv="Cross-Origin-Resource-Policy" content="same-origin">
+
+<!-- 框架選項 (XFO) -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- 內容類型選項 -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- XSS 保護 -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- 引用者政策 -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- 權限政策 -->
+<meta http-equiv="Permissions-Policy" content="
+  camera=(),
+  microphone=(),
+  geolocation=(),
+  payment=(),
+  usb=(),
+  magnetometer=(),
+  gyroscope=(),
+  accelerometer=(),
+  ambient-light-sensor=(),
+  autoplay=(),
+  battery=(),
+  display-capture=(),
+  document-domain=(),
+  encrypted-media=(),
+  fullscreen=(self),
+  picture-in-picture=()
+">

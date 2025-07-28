@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# 網站地圖
+Sitemap: https://cchmark.github.io/sitemap.xml
+
+# 禁止爬取的路徑
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# 爬取延遲（毫秒）
+Crawl-delay: 1
+
+# 特定搜尋引擎設定
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

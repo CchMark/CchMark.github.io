@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ hugo.Generator }}
 
+  <!-- 安全標頭 -->
+  {{ partial "security-headers.html" . }}
+
+  <!-- HTTPS 強制重定向 -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
   {{ if .IsHome -}}
   <title>{{ .Site.Title }}</title>
   {{- else -}}
@@ -15,35 +25,47 @@
 
   {{ partial "seo.html" . }}
 
+  <!-- 預載入關鍵 DNS - 全部使用 HTTPS -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- 關鍵 CSS - 內聯載入以減少 TTFB -->
+  {{ partial "critical-css.html" . }}
+
+  <!-- 非關鍵 CSS - 延遲載入 -->
+  <link rel="preload" as="style" href="{{ `css/poole.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/poole.css` | relURL }}"></noscript>
+  
+  <link rel="preload" as="style" href="{{ `css/hyde.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/hyde.css` | relURL }}"></noscript>
+
+  <link rel="preload" as="style" href="{{ `css/responsive-images.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/responsive-images.css` | relURL }}"></noscript>
+
   <link type="text/css"
         rel="stylesheet"
         href="{{ `css/print.css` | relURL }}"
         media="print">
 
-  <link type="text/css"
-        rel="stylesheet"
-        href="{{ `css/poole.css` | relURL }}">
-
-  <link type="text/css"
-        rel="stylesheet"
-        href="{{ `css/hyde.css` | relURL }}">
-
   {{ partial "theme-color.html" . }}
 
   {{ range $.Site.Params.customCss -}}
-  <link type="text/css" rel="stylesheet" href="{{ . | relURL }}">
+  <link rel="preload" as="style" href="{{ . | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ . | relURL }}"></noscript>
   {{- end}}
 
-
-  <!-- Google Fonts preload & CDN -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap" onload="this.rel='stylesheet'">
+  <!-- Google Fonts - 優化載入，使用 font-display -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap">
   </noscript>
-  <!-- FontAwesome preload & CDN -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" onload="this.rel='stylesheet'">
+
+  <!-- FontAwesome - 延遲載入，確保 HTTPS -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
   </noscript>
 
   <link rel="apple-touch-icon-precomposed"
@@ -66,17 +88,47 @@
 
   {{ partial "footer.html" . }}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
-          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
-          crossorigin="anonymous"></script>
+  <!-- 延遲載入 JavaScript - 移除舊 API，使用現代標準 -->
+  <script>
+    // 現代化腳本載入器
+    function loadScript(src, callback, integrity = null) {
+      const script = document.createElement('script');
+      script.src = src;
+      if (integrity) {
+        script.integrity = integrity;
+        script.crossOrigin = 'anonymous';
+      }
+      script.onload = callback;
+      script.onerror = () => console.error('Failed to load script:', src);
+      document.head.appendChild(script);
+    }
 
+    // 當頁面載入完成後再載入非關鍵腳本
+    window.addEventListener('load', function() {
+      // 載入效能優化腳本
+      loadScript('{{ `js/performance.js` | relURL }}');
+      
+      // 載入隱私友好分析腳本
+      loadScript('{{ `js/analytics.js` | relURL }}');
+      
+      // jQuery 延遲載入
+      loadScript('{{ `js/jquery.min.js` | relURL }}', function() {
+        // jQuery 載入完成後載入其他依賴腳本
+        loadScript('{{ `js/soho.js` | relURL }}');
+        loadScript('{{ `js/theme-toggle.js` | relURL }}');
+      });
 
-  <script src="{{ `js/jquery.min.js` | relURL }}"></script>
-  <script src="{{ `js/soho.js` | relURL }}"></script>
-  <script src="{{ `js/theme-toggle.js` | relURL }}"></script>
+      // FontAwesome JS - 延遲載入，確保 HTTPS 和 integrity
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js', null, 'sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==');
+    });
+  </script>
 
   {{ range $.Site.Params.customJs -}}
-  <script src="{{ . | relURL }}"></script>
+  <script>
+    window.addEventListener('load', function() {
+      loadScript('{{ . | relURL }}');
+    });
+  </script>
   {{- end}}
 
   {{ template "_internal/google_analytics_async.html" . }}
