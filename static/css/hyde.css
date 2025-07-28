@@ -46,9 +46,12 @@ body {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
   color: rgba(255, 255, 255, .5);
   background-color: #202020;
+  box-shadow: 2px 0 16px 0 rgba(73,117,122,0.08);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 @media (min-width: 48em) {
@@ -64,6 +67,11 @@ body {
 /* Sidebar links */
 .sidebar a {
   color: #fff;
+  transition: color 0.2s;
+}
+
+.sidebar a:hover {
+  color: #ffe082;
 }
 
 /* About section */
@@ -101,6 +109,7 @@ a.sidebar-nav-item:focus {
 .sidebar a,
 .sidebar-about h1 {
   color: #fff;
+  transition: color 0.2s;
 }
 
 /*
@@ -108,19 +117,55 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding: 1rem; /* 統一內距 */
+  padding: 2.5rem 2rem; /* 增加留白 */
   min-height: 100%;
-  max-width: calc(100vw - 18rem); /* 避免內容超出視窗 */
+  max-width: calc(100vw - 20rem); /* 兩側多留點空間 */
   margin-left: 18rem; /* 將內容推開側邊欄寬度 */
   box-sizing: border-box; /* 避免內距影響總寬度 */
   overflow-x: visible; /* 避免橫向滾動條 */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+}
+.post {
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  margin-bottom: 2.5rem;
+}
+.post-date {
+  margin-bottom: 1.5rem;
+  color: #888;
+  font-size: 1rem;
+}
+.post h1.title {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.tagline {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #49757a;
+  font-weight: 500;
 }
 
 @media (max-width: 48em) {
   .content {
     max-width: 100%; /* 小螢幕滿版 */
     margin-left: 0;
-    padding: 1rem;
+    margin-top: 0;
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .post {
+    padding: 1.5rem;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -135,12 +180,41 @@ footer {
   width: 100%;
   box-sizing: border-box;
   border-top: 1px solid #e0e0e0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+footer span#busuanzi_container_site_uv {
+  display: inline-block;
+  margin-left: 0.5rem;
+  white-space: nowrap;
 }
 
 @media (min-width: 48em) {
   footer {
     margin-left: 18rem; /* 適配側邊欄寬度 */
     margin-right: 2rem; /* 增加右側內距 */
+    max-width: calc(100vw - 22rem); /* 避免超出視窗 */
+  }
+}
+
+@media (max-width: 48em) {
+  footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem 1rem;
+  }
+  
+  footer span#busuanzi_container_site_uv {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 }
 
@@ -182,16 +256,22 @@ footer a,
 }
 
 .read-more-link a {
-  padding: 8px 16px;
-  border: 1px solid;
-  border-color: #49757a;
-  border-radius: 4px;
+  padding: 10px 24px;
+  border: none;
+  background: #49757a;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(73,117,122,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .read-more-link a:hover {
   text-decoration: none;
-  color: #fff;
-  background-color: #49757a;
+  color: #49757a;
+  background: #fff;
+  border: 1.5px solid #49757a;
+  box-shadow: 0 4px 16px 0 rgba(73,117,122,0.10);
 }
 
 .pull-right {
@@ -217,6 +297,9 @@ ul.posts li,
 .social-icons a {
   font-size: 1.5rem;
   padding: 0.2rem;
+  transition: color 0.2s, transform 0.2s;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
 }
 
 @media (min-width: 58rem) {
@@ -235,6 +318,13 @@ ul.posts li,
 .social-icons a:hover,
 .social-icons a:focus {
   text-decoration: none !important;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+  color: #ffe082;
+  background: #49757a;
+  transform: scale(1.15);
 }
 
 /*
@@ -321,16 +411,21 @@ ul.tags li {
 }
 
 a.tag-link {
-  background-color: #f2f2f2;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 0.75rem;
+  background-color: #49757a;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
   text-decoration: none;
-  color: #757575 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px 0 rgba(73,117,122,0.1);
+  transition: background 0.2s, transform 0.2s;
 }
 
 a.tag-link:hover {
   text-decoration: none;
+  background-color: #3d626d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px 0 rgba(73,117,122,0.15);
 }
 
 .share-buttons {
@@ -365,12 +460,7 @@ figcaption {
   font-size: 80%;
 }
 
-.tagline {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: .5rem;
-  font-weight: 400;
-}
+/* 刪除重複的 .tagline 定義 */
 
 .truncate {
   overflow: hidden;
