@@ -15,7 +15,9 @@
   object-src 'none';
   base-uri 'self';
   form-action 'self';
+  {{ if not hugo.IsServer -}}
   upgrade-insecure-requests;
+  {{- end }}
 ">
 
 <!-- 嚴格傳輸安全 (HSTS) -->

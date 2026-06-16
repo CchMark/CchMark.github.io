@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Mark Chang Life</title><link>https://cchmark.github.io/</link><description>Recent content on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://cchmark.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CI/CD Pipeline 問題排查與我的思考流程紀錄</title><link>https://cchmark.github.io/posts/20250725cicdproblemsolving/</link><pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate><guid>https://cchmark.github.io/posts/20250725cicdproblemsolving/</guid><description>&lt;h2 id="問題釐清與分解"&gt;問題釐清與分解&lt;/h2&gt;
-&lt;p&gt;這次在 GitLab CI/CD 執行 Docker build 時，遇到 NuGet 套件無法從私有 repo 拉取，導致建置失敗。&lt;/p&gt;</description></item><item><title>2025 05 07 關注點分離應用筆記</title><link>https://cchmark.github.io/posts/2025-05-07-post/</link><pubDate>Wed, 07 May 2025 20:06:29 +0800</pubDate><guid>https://cchmark.github.io/posts/2025-05-07-post/</guid><description>&lt;h2 id="-關注點分離-sop適用於所有後端應用"&gt;✅ 關注點分離 SOP（適用於所有後端應用）&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Mark Chang Life</title><link>http://localhost:1313/</link><description>Recent content on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>CI/CD Pipeline 問題排查與我的思考流程紀錄</title><link>http://localhost:1313/posts/20250725cicdproblemsolving/</link><pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/20250725cicdproblemsolving/</guid><description>&lt;h2 id="問題釐清與分解"&gt;問題釐清與分解&lt;/h2&gt;
+&lt;p&gt;這次在 GitLab CI/CD 執行 Docker build 時，遇到 NuGet 套件無法從私有 repo 拉取，導致建置失敗。&lt;/p&gt;</description></item><item><title>2025 05 07 關注點分離應用筆記</title><link>http://localhost:1313/posts/2025-05-07-post/</link><pubDate>Wed, 07 May 2025 20:06:29 +0800</pubDate><guid>http://localhost:1313/posts/2025-05-07-post/</guid><description>&lt;h2 id="-關注點分離-sop適用於所有後端應用"&gt;✅ 關注點分離 SOP（適用於所有後端應用）&lt;/h2&gt;
 &lt;h3 id="步驟一先問自己這段邏輯在做什麼"&gt;步驟一：先問自己「這段邏輯在做什麼？」&lt;/h3&gt;
 &lt;p&gt;這是核心判斷點。你會發現大多數邏輯屬於以下 3 種責任之一：&lt;/p&gt;
 &lt;table&gt;
@@ -85,14 +85,220 @@
 &lt;hr&gt;
 &lt;h3 id="步驟三讓流程呼叫服務呼叫存取"&gt;步驟三：讓「流程」呼叫「服務」呼叫「存取」&lt;/h3&gt;
 &lt;h4 id="-錯誤寫法"&gt;❌ 錯誤寫法：&lt;/h4&gt;
-&lt;p&gt;流程直接開 &lt;code&gt;SqlConnection&lt;/code&gt; 撈資料 + 做邏輯 + 輸出 Excel。&lt;/p&gt;</description></item><item><title>20230707 升版筆記</title><link>https://cchmark.github.io/posts/20230707diary/</link><pubDate>Fri, 07 Jul 2023 19:03:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20230707diary/</guid><description>&lt;h1 id="升級步驟"&gt;升級步驟&lt;/h1&gt;
+&lt;p&gt;流程直接開 &lt;code&gt;SqlConnection&lt;/code&gt; 撈資料 + 做邏輯 + 輸出 Excel。&lt;/p&gt;</description></item><item><title>20230710D</title><link>http://localhost:1313/posts/20230710diary/</link><pubDate>Mon, 10 Jul 2023 10:47:26 +0800</pubDate><guid>http://localhost:1313/posts/20230710diary/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//angular 原先套版 未使用material &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;panel-body pt-0 border-0 offer-code-list-table&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;table class=&lt;span style="color:#e6db74"&gt;&amp;#34;table-custom table-hover table-sticky&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;thead&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;tr class=&lt;span style="color:#e6db74"&gt;&amp;#34;table-input-filter&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferResellers&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Resellers&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferResellers&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferResellers&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1 w-10rem&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferCode&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Offer Code&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferCode&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferCode&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferDesc&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;CP Number&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferDesc&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferDesc&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferCountry&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Offer Country&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferCountry&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferCountry&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1 w-10rem&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferStatus&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Offer Status&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferStatus&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferStatus&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferStartDate&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Offer StartDate&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferStartDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferStartDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;OfferEndDate&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Offer EndDate&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferEndDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;OfferEndDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;PublishByUser&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Publish By User&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;PublishByUser&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;PublishByUser&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;th class=&lt;span style="color:#e6db74"&gt;&amp;#34;lh-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-wrap&amp;#34;&lt;/span&gt; (click)=&lt;span style="color:#e6db74"&gt;&amp;#34;sort(&amp;#39;PublishDate&amp;#39;)&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span&amp;gt;Publish Date&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;sort-ico&amp;#34;&lt;/span&gt; [class.sort-asc]=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;PublishDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;asc&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [class.sort-desc]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;sortColumn === &amp;#39;PublishDate&amp;#39; &amp;amp;&amp;amp; sortDirection === &amp;#39;desc&amp;#39;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/th&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/tr&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/thead&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;tbody&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;tr *ngFor=&lt;span style="color:#e6db74"&gt;&amp;#34;let item of rebateInfo.OfferHead&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferResellers}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;&amp;lt;a [routerLink]=&lt;span style="color:#e6db74"&gt;&amp;#34;[&amp;#39;/MIRS/editrebate&amp;#39;]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt; [queryParams]&lt;/span&gt;=&lt;span style="color:#e6db74"&gt;&amp;#34;{ OfferCode: item.OfferCode }&amp;#34;&lt;/span&gt;&amp;gt;{{item.OfferCode}}&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferDesc}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferCountry}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferStatus}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferStartDate | date: &lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;yyyy/MM/dd&lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt; }}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.OfferEndDate | date: &lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;yyyy/MM/dd&lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.PublishByUser}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td&amp;gt;{{item.PublishDate| date: &lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;yyyy/MM/dd&lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;}}&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/tr&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/tbody&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/table&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//Angular 客製化分頁&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; goToFirstPage() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber = &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.getRebateInfo();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; goToPreviousPage() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber = Math.max(&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber - &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.getRebateInfo();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; goToNextPage() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber &amp;amp;&amp;amp; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber &amp;lt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber++;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.getRebateInfo();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; goToLastPage() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageNumber = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.getRebateInfo();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; calculatePageSizeOptions(data: MirsResponse): &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 計算總頁數，使用 Math.ceil 函式將總數據量除以每頁顯示數量並向上取整&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber = Math.ceil(data.TotalCount / &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageSize);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 生成每頁顯示資料數量的選項陣列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.pageSizeOptions = Array.&lt;span style="color:#66d9ef"&gt;from&lt;/span&gt;({ length: &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.newpageNumber }, (_, i) =&amp;gt; i + &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; getRebateInfoData(pageNumber: number, pageSize: number): Observable&amp;lt;MirsResponse&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; result = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.http.&lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;&amp;lt;MirsResponse&amp;gt;(&lt;span style="color:#960050;background-color:#1e0010"&gt;`$&lt;/span&gt;{Common.Backend.HOST}&lt;span style="color:#960050;background-color:#1e0010"&gt;$&lt;/span&gt;{Common.Backend.GetOfferCodeByHeadInfoPageSize}?pageNumber=&lt;span style="color:#960050;background-color:#1e0010"&gt;$&lt;/span&gt;{pageNumber}&amp;amp;pageSize=&lt;span style="color:#960050;background-color:#1e0010"&gt;$&lt;/span&gt;{pageSize}&lt;span style="color:#960050;background-color:#1e0010"&gt;`&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; result;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//客製搜尋&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; searchOfferCode(): &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.offerCode.trim() == &lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&amp;#39;&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.rebateInfo.OfferHead = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.originalOfferHead;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.rebateInfo.OfferHead = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.originalOfferHead.filter(item =&amp;gt; item.OfferCode.includes(&lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.offerCode));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; } 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//上傳 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;div class=&lt;span style="color:#e6db74"&gt;&amp;#34;file-upload-table table-list border rounded mt-2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;table class=&lt;span style="color:#e6db74"&gt;&amp;#34;table-custom table-a-underline table-hover table-sm&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;tbody&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;tr&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td class=&lt;span style="color:#e6db74"&gt;&amp;#34;file-icon&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;mdi mdi-attachment&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td class=&lt;span style="color:#e6db74"&gt;&amp;#34;ps-0&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;a href=&lt;span style="color:#e6db74"&gt;&amp;#34;#&amp;#34;&lt;/span&gt; tooltip-trig=&lt;span style="color:#e6db74"&gt;&amp;#34;theme-dark&amp;#34;&lt;/span&gt; tooltip-placement=&lt;span style="color:#e6db74"&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tooltip-title=&lt;span style="color:#e6db74"&gt;&amp;#34;開啟檔案&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;檔案名稱&lt;/span&gt;.pdf&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td class=&lt;span style="color:#e6db74"&gt;&amp;#34;text-end&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style="color:#ae81ff"&gt;105.1&lt;/span&gt;MB&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;td class=&lt;span style="color:#e6db74"&gt;&amp;#34;text-center&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;btn btn-sm btn-transparent-static btn-danger&amp;#34;&lt;/span&gt; href=&lt;span style="color:#e6db74"&gt;&amp;#34;#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tooltip-trig=&lt;span style="color:#e6db74"&gt;&amp;#34;theme-dark&amp;#34;&lt;/span&gt; tooltip-placement=&lt;span style="color:#e6db74"&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt; tooltip-title=&lt;span style="color:#e6db74"&gt;&amp;#34;刪除檔案&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;i
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; class=&lt;span style="color:#e6db74"&gt;&amp;#34;mdi mdi-close&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/tr&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/tbody&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/table&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//客製 搜尋按鈕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a class=&lt;span style="color:#e6db74"&gt;&amp;#34;btn btn-primary btn-lg&amp;#34;&lt;/span&gt; (change)=&lt;span style="color:#e6db74"&gt;&amp;#34;searchOfferCode()&amp;#34;&lt;/span&gt; &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;i class=&lt;span style="color:#e6db74"&gt;&amp;#34;mdi mdi-magnify&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;span class=&lt;span style="color:#e6db74"&gt;&amp;#34;ms-1&amp;#34;&lt;/span&gt;&amp;gt;Query&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//mat 搜尋 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;mat-form-field [style.width.%]=&lt;span style="color:#e6db74"&gt;&amp;#34;100&amp;#34;&lt;/span&gt; &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;input matInput &lt;span style="color:#960050;background-color:#1e0010"&gt;#&lt;/span&gt;filterInput (keyup)=&lt;span style="color:#e6db74"&gt;&amp;#34;applyFilter(filterInput.value)&amp;#34;&lt;/span&gt; placeholder=&lt;span style="color:#e6db74"&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Resellers/OfferCode/CP Number&lt;span style="color:#e6db74"&gt;&amp;#34; class=&amp;#34;&lt;/span&gt;form-control&lt;span style="color:#e6db74"&gt;&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/mat-form-field&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//跳轉畫面 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;a [routerLink]=&lt;span style="color:#e6db74"&gt;&amp;#34;[&amp;#39;/MIRS/editrebate&amp;#39;]&amp;#34;&lt;/span&gt; [queryParams]=&lt;span style="color:#e6db74"&gt;&amp;#34;{ OfferCode: item.OfferCode }&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {{ item.OfferCode }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/a&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 線上瀏覽&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; previewFile(): &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; offerCode = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.offerCodeInfo.OfferCode;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; userName = &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.offerCodeInfo.UserName;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.apiService.previewPDF(offerCode, userName).subscribe({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; next: (responseData: any) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; console.log(responseData);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; blob = &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Blob([responseData], { type: &lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt;application/pdf&lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; objectUrl = URL.createObjectURL(blob);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; newWindow = window.open();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (newWindow) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; newWindow.location.href = objectUrl; &lt;span style="color:#75715e"&gt;// 開啟預覽 PDF 內容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; } &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alert(&lt;span style="color:#960050;background-color:#1e0010"&gt;&amp;#39;無法開啟新分頁&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alert(&lt;span style="color:#e6db74"&gt;&amp;#34;Previcew Succes !&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; error: (error: any) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alert(&lt;span style="color:#e6db74"&gt;&amp;#34;Previcew Fail !&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; console.log(error);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>20230707 升版筆記</title><link>http://localhost:1313/posts/20230707diary/</link><pubDate>Fri, 07 Jul 2023 19:03:37 +0800</pubDate><guid>http://localhost:1313/posts/20230707diary/</guid><description>&lt;h1 id="升級步驟"&gt;升級步驟&lt;/h1&gt;
 &lt;p&gt;筆記一下~紀錄升級流程步驟XD&lt;/p&gt;
 &lt;h2 id="1-修改-hugo_deployyml"&gt;1. 修改 HUGO_DEPLOY.yml&lt;/h2&gt;
 &lt;p&gt;在HUGO_DEPLOY.yml檔案中，需要做修改。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;runs-&lt;span style="color:#66d9ef"&gt;on&lt;/span&gt;: ubuntu-&lt;span style="color:#ae81ff"&gt;18.04&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;將上述行修改為：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;runs-&lt;span style="color:#66d9ef"&gt;on&lt;/span&gt;: ubuntu-&lt;span style="color:#ae81ff"&gt;22.04&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;這將使工作流程在最新的Ubuntu 22.04版本上運行。&lt;/p&gt;</description></item><item><title>20230516 TypeScript Note</title><link>https://cchmark.github.io/posts/20230516diary/</link><pubDate>Tue, 16 May 2023 19:45:23 +0800</pubDate><guid>https://cchmark.github.io/posts/20230516diary/</guid><description>&lt;h1 id="型別"&gt;型別&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;這將使工作流程在最新的Ubuntu 22.04版本上運行。&lt;/p&gt;</description></item><item><title>20230516 TypeScript Note</title><link>http://localhost:1313/posts/20230516diary/</link><pubDate>Tue, 16 May 2023 19:45:23 +0800</pubDate><guid>http://localhost:1313/posts/20230516diary/</guid><description>&lt;h1 id="型別"&gt;型別&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;主要分別有物件型別 (Object Type)以及原始型別 (Primitive Type)&lt;/li&gt;
 &lt;/ul&gt;
@@ -116,7 +322,56 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="原始型別-primitive-type"&gt;原始型別 (Primitive Type)&lt;/h2&gt;
 &lt;p&gt;原始型別的特性是不能有屬性(Property)
--原始型別 (Primitive Type):string (字串)、number (數值)、boolean (布林值)、null、undefined、Symbol。&lt;/p&gt;</description></item><item><title>前端效能調校筆記 Part 1</title><link>https://cchmark.github.io/posts/20230211/</link><pubDate>Sat, 11 Feb 2023 20:14:18 +0800</pubDate><guid>https://cchmark.github.io/posts/20230211/</guid><description>&lt;h1 id="前端常見專有名詞"&gt;前端常見專有名詞&lt;/h1&gt;
+-原始型別 (Primitive Type):string (字串)、number (數值)、boolean (布林值)、null、undefined、Symbol。&lt;/p&gt;</description></item><item><title>前端效能調校筆記 Part 2</title><link>http://localhost:1313/posts/20230211part2/</link><pubDate>Sat, 11 Feb 2023 20:15:18 +0800</pubDate><guid>http://localhost:1313/posts/20230211part2/</guid><description>&lt;h1 id="核心web指標---core-web-vitals"&gt;核心Web指標 - Core Web Vitals&lt;/h1&gt;
+&lt;p&gt;2020年指標重點著重用戶體驗的三個面向:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最大內容繪製(LCP)(Largest Contentful Paint)
+&lt;ul&gt;
+&lt;li&gt;頁面的 LCP 應在頁面開始加載的 2.5 秒內出現，用來評估載入性能
+&lt;ul&gt;
+&lt;li&gt;優化 LCP 的建議:
+&lt;ul&gt;
+&lt;li&gt;使用 PRPL Pattern 達到即時載入&lt;/li&gt;
+&lt;li&gt;優化渲染路徑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;首次輸入延遲 (FID) (First Input Delay)
+&lt;ul&gt;
+&lt;li&gt;頁面的 FID 應小於 100 毫秒，用來評估網頁的可互動性
+&lt;ul&gt;
+&lt;li&gt;優化 FID 的建議:
+&lt;ul&gt;
+&lt;li&gt;減少第三方程式的影響&lt;/li&gt;
+&lt;li&gt;減少 JavaScript 執行時間&lt;/li&gt;
+&lt;li&gt;最小化主執行緒的工作&lt;/li&gt;
+&lt;li&gt;減少傳輸檔案的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;累積佈局偏移 (CLS) (Cumulative Layout Shift)
+&lt;ul&gt;
+&lt;li&gt;頁面的 CLS 應保持在 0.1 以下，用來評估視覺穩定性
+&lt;ul&gt;
+&lt;li&gt;優化 CLS 的建議:
+&lt;ul&gt;
+&lt;li&gt;預先指定圖片或影片的尺寸&lt;/li&gt;
+&lt;li&gt;盡量不要在目前畫面的上方插入新的內容&lt;/li&gt;
+&lt;li&gt;使用 CSS 轉換動畫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>前端效能調校筆記 Part 1</title><link>http://localhost:1313/posts/20230211/</link><pubDate>Sat, 11 Feb 2023 20:14:18 +0800</pubDate><guid>http://localhost:1313/posts/20230211/</guid><description>&lt;h1 id="前端常見專有名詞"&gt;前端常見專有名詞&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;AVIF : 是一種圖像格式，旨在提供比 JPEG 和 PNG 更高的圖像質量和更快的加載速度。&lt;/li&gt;
 &lt;li&gt;Chrome 用戶體驗報告 CrUX :（Chrome User Experience Report）是由 Google 收集的全球用戶體驗數據，旨在幫助開發人員了解他們網站的性能和用戶體驗。&lt;/li&gt;
@@ -162,7 +417,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2022 年度回顧</title><link>https://cchmark.github.io/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>https://cchmark.github.io/posts/20221231annualreview/</guid><description>&lt;p&gt;回顧一下2022年自己都在做什麼事情XD&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>2022 年度回顧</title><link>http://localhost:1313/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>http://localhost:1313/posts/20221231annualreview/</guid><description>&lt;p&gt;回顧一下2022年自己都在做什麼事情XD&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="技術"&gt;&lt;strong&gt;技術&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;換新工作環境，我發現自己在資料結構和物件導向以及RESTful的相關知識不夠扎實，導致我在撰寫Code時常常有些困難或是莫名的小瓶頸。對於撰寫出來Code理解不夠透徹，以至於主管Code Review時常回答出來的內容不是夠充分和明確。因此，購買Udemy線上課程以及SkillTree課程，以彌補自己的不足。&lt;/p&gt;
@@ -176,14 +431,14 @@ An in-depth, step-by-step guide to classes, interfaces and object-oriented progr
 &lt;li&gt;C# Advanced Topics: Prepare for Technical Interviews
 Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ, Async/Await and more!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ&lt;/p&gt;</description></item><item><title>建置GoogleCloud環境</title><link>https://cchmark.github.io/posts/20221227concatenatedgooglesheetapi/</link><pubDate>Tue, 27 Dec 2022 10:44:49 +0800</pubDate><guid>https://cchmark.github.io/posts/20221227concatenatedgooglesheetapi/</guid><description>&lt;p&gt;→&lt;/p&gt;
+&lt;p&gt;如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ&lt;/p&gt;</description></item><item><title>建置GoogleCloud環境</title><link>http://localhost:1313/posts/20221227concatenatedgooglesheetapi/</link><pubDate>Tue, 27 Dec 2022 10:44:49 +0800</pubDate><guid>http://localhost:1313/posts/20221227concatenatedgooglesheetapi/</guid><description>&lt;p&gt;→&lt;/p&gt;
 &lt;h1 id="googlesheet-環境建置"&gt;GoogleSheet 環境建置&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;STEP 1 : 建立GOOGLE Cloud
 先建立專案 &lt;a href="https://console.cloud.google.com/apis/dashboard"&gt;https://console.cloud.google.com/apis/dashboard&lt;/a&gt;
 第一次使用的可能會看到這個先同意即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://cchmark.github.io/images/GoogleSheetFile/demo1.png" alt="1"&gt;&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</guid><description>&lt;h1 id="partial-view-部分檢視"&gt;Partial View 部分檢視&lt;/h1&gt;
+&lt;p&gt;&lt;img src="http://localhost:1313/images/GoogleSheetFile/demo1.png" alt="1"&gt;&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>http://localhost:1313/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>http://localhost:1313/posts/20221208net6codemvcbypartialview/</guid><description>&lt;h1 id="partial-view-部分檢視"&gt;Partial View 部分檢視&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;主要應用於HTML重用,由於Partial View 無法取得Model需要透過外部呼叫&lt;/li&gt;
 &lt;li&gt;透過Model傳遞才能取得資料綁定
@@ -197,12 +452,12 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#66d9ef"&gt;partial&lt;/span&gt; name=&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//html helper 個人偏好使用這個XD&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; @Html.Partial(&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;##範例&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>https://cchmark.github.io/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvc/</guid><description>&lt;h1 id="net-6-如何讀取appsettings"&gt;.NET 6 如何讀取AppSettings&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;##範例&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>http://localhost:1313/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>http://localhost:1313/posts/20221208net6codemvc/</guid><description>&lt;h1 id="net-6-如何讀取appsettings"&gt;.NET 6 如何讀取AppSettings&lt;/h1&gt;
 &lt;h2 id="appsettings"&gt;AppSettings&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;由於.Net code 捨棄 Web.config 改為前端常用的JSON格式作為設定檔&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;好處的部分:&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>https://cchmark.github.io/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221207net6codemvc/</guid><description>&lt;h1 id="什麼是mvc"&gt;什麼是MVC&lt;/h1&gt;
+&lt;p&gt;好處的部分:&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>http://localhost:1313/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>http://localhost:1313/posts/20221207net6codemvc/</guid><description>&lt;h1 id="什麼是mvc"&gt;什麼是MVC&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;MVC 是三個部分組成的
 &lt;ul&gt;
@@ -251,7 +506,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="結論"&gt;結論&lt;/h2&gt;
-&lt;p&gt;透過MVC有效實現關注點分離,利於團隊分工.&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>https://cchmark.github.io/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>https://cchmark.github.io/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
+&lt;p&gt;透過MVC有效實現關注點分離,利於團隊分工.&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>http://localhost:1313/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>http://localhost:1313/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dapper Transaction 範例&lt;/li&gt;
 &lt;/ul&gt;
@@ -316,7 +571,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		connection.BulkInsert(customers);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Visual Studio 小技巧</title><link>https://cchmark.github.io/posts/20221201toolstips/</link><pubDate>Thu, 01 Dec 2022 16:49:20 +0800</pubDate><guid>https://cchmark.github.io/posts/20221201toolstips/</guid><description>&lt;h1 id="visual-studio-好用設定與技巧"&gt;Visual Studio 好用設定與技巧&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Visual Studio 小技巧</title><link>http://localhost:1313/posts/20221201toolstips/</link><pubDate>Thu, 01 Dec 2022 16:49:20 +0800</pubDate><guid>http://localhost:1313/posts/20221201toolstips/</guid><description>&lt;h1 id="visual-studio-好用設定與技巧"&gt;Visual Studio 好用設定與技巧&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Shift+Alt+.
 &lt;ul&gt;
@@ -351,7 +606,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;li&gt;這樣設定對眼睛比較舒服XD&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>如何應用Dapper</title><link>https://cchmark.github.io/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>https://cchmark.github.io/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
+&lt;/ul&gt;</description></item><item><title>如何應用Dapper</title><link>http://localhost:1313/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>http://localhost:1313/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Customer&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; CustomerID		{&lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;;&lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;;}
@@ -393,13 +648,13 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; parameters.Add(&lt;span style="color:#e6db74"&gt;&amp;#34;CustomerName&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; result = connection.Execute(sqlCustomerInsert,parameters)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>https://cchmark.github.io/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>https://cchmark.github.io/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>http://localhost:1313/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>http://localhost:1313/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
 &lt;p&gt;工作上常聽到Dapper，但不知道這個套件實際如何使用，所以寫一篇學習筆記XD&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="dapper介紹"&gt;Dapper介紹&lt;/h2&gt;
-&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>https://cchmark.github.io/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
+&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>http://localhost:1313/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>http://localhost:1313/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
 &lt;h2 id="yield-return-介紹"&gt;Yield Return 介紹&lt;/h2&gt;
-&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>https://cchmark.github.io/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>https://cchmark.github.io/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
+&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>http://localhost:1313/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>http://localhost:1313/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
 &lt;h2 id="txt-讀檔"&gt;TXT 讀檔&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; checkToken()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -464,9 +719,9 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Console.WriteLine(&lt;span style="color:#e6db74"&gt;&amp;#34;The content of the profile is incorrect, please confirm!\n&amp;#34;&lt;/span&gt; + ex.Message);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>辦別IEnumerable和List用途</title><link>https://cchmark.github.io/posts/20221104csharppart2/</link><pubDate>Fri, 04 Nov 2022 16:01:16 +0800</pubDate><guid>https://cchmark.github.io/posts/20221104csharppart2/</guid><description>&lt;h1 id="ienumerable-和-list-區別"&gt;IEnumerable 和 List 區別&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>辦別IEnumerable和List用途</title><link>http://localhost:1313/posts/20221104csharppart2/</link><pubDate>Fri, 04 Nov 2022 16:01:16 +0800</pubDate><guid>http://localhost:1313/posts/20221104csharppart2/</guid><description>&lt;h1 id="ienumerable-和-list-區別"&gt;IEnumerable 和 List 區別&lt;/h1&gt;
 &lt;h2 id="ienumerable-與-list-差異"&gt;IEnumerable 與 List 差異&lt;/h2&gt;
-&lt;p&gt;C# 中 IEnumerable 和 List 的主要區別在於 IEnumerable 是一個介面，而 List 是一個具體的class可以new 出來實作。此外， IEnumerable 是只讀的，而 List 不是。 List 提供Add、Clear、Contains、IndexOf、RemoveAt、Count等方法，而 IEnumerable 提供了一個介面來接收集合資料，用於逐一讀取集合中的資料內容（枚舉）。&lt;/p&gt;</description></item><item><title>C# 透過Linq實作分頁功能</title><link>https://cchmark.github.io/posts/20221104csharp/</link><pubDate>Fri, 04 Nov 2022 11:19:03 +0800</pubDate><guid>https://cchmark.github.io/posts/20221104csharp/</guid><description>&lt;h1 id="c-如何做分頁"&gt;C# 如何做分頁&lt;/h1&gt;
+&lt;p&gt;C# 中 IEnumerable 和 List 的主要區別在於 IEnumerable 是一個介面，而 List 是一個具體的class可以new 出來實作。此外， IEnumerable 是只讀的，而 List 不是。 List 提供Add、Clear、Contains、IndexOf、RemoveAt、Count等方法，而 IEnumerable 提供了一個介面來接收集合資料，用於逐一讀取集合中的資料內容（枚舉）。&lt;/p&gt;</description></item><item><title>C# 透過Linq實作分頁功能</title><link>http://localhost:1313/posts/20221104csharp/</link><pubDate>Fri, 04 Nov 2022 11:19:03 +0800</pubDate><guid>http://localhost:1313/posts/20221104csharp/</guid><description>&lt;h1 id="c-如何做分頁"&gt;C# 如何做分頁&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//每頁顯示資料&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pageSize = &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//頁碼 初始0 為 畫面呈現時的第一頁&lt;/span&gt;
@@ -487,7 +742,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pageNum++;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>https://cchmark.github.io/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>https://cchmark.github.io/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>http://localhost:1313/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>http://localhost:1313/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
 &lt;p&gt;筆記一下~&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; client = &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; RestClient(&lt;span style="color:#e6db74"&gt;&amp;#34;http://example.com&amp;#34;&lt;/span&gt;);
@@ -553,7 +808,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//按需中止請求&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// abort the request on demand&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;asyncHandle.Abort();
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>https://cchmark.github.io/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>https://cchmark.github.io/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>http://localhost:1313/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>http://localhost:1313/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
 &lt;p&gt;筆記一下NPOI 轉 DataTable 字串之中有換行符號導致提前讀取結束，指定結束位置的對應字串&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; DataTable CsvToDataTableByNewEgg(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; fileName)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -616,13 +871,13 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; dataTable;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Postman 建立測試環境</title><link>https://cchmark.github.io/posts/20221006tools/</link><pubDate>Thu, 06 Oct 2022 16:11:52 +0800</pubDate><guid>https://cchmark.github.io/posts/20221006tools/</guid><description>&lt;h1 id="建立postman-api-mock-server"&gt;建立Postman API Mock Server&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Postman 建立測試環境</title><link>http://localhost:1313/posts/20221006tools/</link><pubDate>Thu, 06 Oct 2022 16:11:52 +0800</pubDate><guid>http://localhost:1313/posts/20221006tools/</guid><description>&lt;h1 id="建立postman-api-mock-server"&gt;建立Postman API Mock Server&lt;/h1&gt;
 &lt;p&gt;主要應用在前後端分離的架構下，前端在完成網頁畫面的切版後，需要等待後端給API的規格。所以使用Postman Mock Server 初步設計API傳值結構以及回傳值結構供前端Mock。
 待後端完成相關實作完成，後續只要替換網址做測試了。&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;好處:&lt;/p&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>https://cchmark.github.io/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
+&lt;p&gt;好處:&lt;/p&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>http://localhost:1313/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>http://localhost:1313/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//限制必須使用執行個體方法或是擴充方法的狀況 集合初始設定式的 Add 擴充方法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; Main(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt;[] args)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -657,7 +912,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; Age { &lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>https://cchmark.github.io/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>https://cchmark.github.io/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>http://localhost:1313/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>http://localhost:1313/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
 &lt;h2 id="集合有兩種使用方式"&gt;集合有兩種使用方式&lt;/h2&gt;
 &lt;h3 id="1建立物件的陣列array"&gt;1.建立物件的陣列(Array)&lt;/h3&gt;
 &lt;ul&gt;
@@ -674,7 +929,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id="從陣列array取得資料"&gt;從陣列(Array)取得資料&lt;/h2&gt;
-&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>https://cchmark.github.io/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>https://cchmark.github.io/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
+&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>http://localhost:1313/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>http://localhost:1313/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
 &lt;h2 id="參考型別reference-type"&gt;參考型別(Reference Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -727,11 +982,11 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;h2 id="實值型別value-type"&gt;實值型別(Value Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>About</title><link>https://cchmark.github.io/about/</link><pubDate>Mon, 11 Jul 2022 09:55:03 +0800</pubDate><guid>https://cchmark.github.io/about/</guid><description>&lt;p&gt;Hi my name is Mark.&lt;/p&gt;
+&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Mon, 11 Jul 2022 09:55:03 +0800</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;p&gt;Hi my name is Mark.&lt;/p&gt;
 &lt;p&gt;My dream back then was to build a game plug-in for myself to use.
 So that dream affected the rest of my life.
 I continued education to the university level and I had a bachelor of Information Technology
-and a Master of Network Learning Technology.&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part3</title><link>https://cchmark.github.io/posts/20220704python_learning_part3/</link><pubDate>Mon, 04 Jul 2022 14:04:00 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning_part3/</guid><description>&lt;p&gt;#居家上班滑鼠自動移動位置&lt;/p&gt;
+and a Master of Network Learning Technology.&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part3</title><link>http://localhost:1313/posts/20220704python_learning_part3/</link><pubDate>Mon, 04 Jul 2022 14:04:00 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning_part3/</guid><description>&lt;p&gt;#居家上班滑鼠自動移動位置&lt;/p&gt;
 &lt;h2 id="1套件安裝"&gt;1.套件安裝&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;pip install pynput&lt;/code&gt;
 &lt;code&gt;pip install pyautogui&lt;/code&gt;&lt;/p&gt;
@@ -753,16 +1008,16 @@ while 1:
  1, s[1]), duration=2, tween=pyautogui.easeInOutQuad) # 隨機移動到屏幕長寬內的位置
  print(a)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10263995"&gt;參考文章&lt;/a&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part2</title><link>https://cchmark.github.io/posts/20220704python_learning_part2/</link><pubDate>Mon, 04 Jul 2022 13:20:59 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning_part2/</guid><description>&lt;h1 id="selenium--webdriver-安裝"&gt;Selenium + WebDriver 安裝&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10263995"&gt;參考文章&lt;/a&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part2</title><link>http://localhost:1313/posts/20220704python_learning_part2/</link><pubDate>Mon, 04 Jul 2022 13:20:59 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning_part2/</guid><description>&lt;h1 id="selenium--webdriver-安裝"&gt;Selenium + WebDriver 安裝&lt;/h1&gt;
 &lt;h2 id="1selenium-安裝"&gt;1.Selenium 安裝&lt;/h2&gt;
 &lt;p&gt;在python裡執行以下程式碼，即可安裝Selenium套件。
-&lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning</title><link>https://cchmark.github.io/posts/20220704python_learning/</link><pubDate>Mon, 04 Jul 2022 10:36:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning/</guid><description>&lt;p&gt;#上班逛到鐵人賽文章發現非常趣味的文章,紀錄一下過程~XDDDD&lt;/p&gt;
+&lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning</title><link>http://localhost:1313/posts/20220704python_learning/</link><pubDate>Mon, 04 Jul 2022 10:36:37 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning/</guid><description>&lt;p&gt;#上班逛到鐵人賽文章發現非常趣味的文章,紀錄一下過程~XDDDD&lt;/p&gt;
 &lt;p&gt;1.確認安裝好基本 Python 開發環境，以及 pip Python 套件管理工具。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;2.從 Windows 開始選單中，打開「Windows 系統」中的「命令提示字元」。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>https://cchmark.github.io/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>https://cchmark.github.io/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
+&lt;p&gt;2.從 Windows 開始選單中，打開「Windows 系統」中的「命令提示字元」。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>http://localhost:1313/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>http://localhost:1313/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
 &lt;p&gt;We replaced the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bundles.Add(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ScriptBundle(&lt;span style="color:#e6db74"&gt;&amp;#34;~/bundles/mybundle&amp;#34;&lt;/span&gt;).Include(
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/Scripts/...&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/Scripts/...&amp;#34;&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;with:&lt;/p&gt;</description></item><item><title>2022-03-08日記</title><link>https://cchmark.github.io/posts/20220308post/</link><pubDate>Tue, 08 Mar 2022 11:15:01 +0800</pubDate><guid>https://cchmark.github.io/posts/20220308post/</guid><description>&lt;p&gt;學習這條路很廣，喜歡什麼技術不重要，重要的是你肯花時間去學習，
-總有一天你會發現原來我曾經有接觸並在無形之中成長。&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://cchmark.github.io/posts/hello-world/</link><pubDate>Mon, 10 Jan 2022 16:12:51 +0800</pubDate><guid>https://cchmark.github.io/posts/hello-world/</guid><description>&lt;h2 id="just-keep-going-straight"&gt;Just keep going straight!&lt;/h2&gt;</description></item><item><title>所有文章</title><link>https://cchmark.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cchmark.github.io/archives/</guid><description>歷史文章依據年月歸檔.</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;with:&lt;/p&gt;</description></item><item><title>2022-03-08日記</title><link>http://localhost:1313/posts/20220308post/</link><pubDate>Tue, 08 Mar 2022 11:15:01 +0800</pubDate><guid>http://localhost:1313/posts/20220308post/</guid><description>&lt;p&gt;學習這條路很廣，喜歡什麼技術不重要，重要的是你肯花時間去學習，
+總有一天你會發現原來我曾經有接觸並在無形之中成長。&lt;/p&gt;</description></item><item><title>Hello World</title><link>http://localhost:1313/posts/hello-world/</link><pubDate>Mon, 10 Jan 2022 16:12:51 +0800</pubDate><guid>http://localhost:1313/posts/hello-world/</guid><description>&lt;h2 id="just-keep-going-straight"&gt;Just keep going straight!&lt;/h2&gt;</description></item><item><title>所有文章</title><link>http://localhost:1313/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/archives/</guid><description>歷史文章依據年月歸檔.</description></item></channel></rss>
