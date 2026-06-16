@@ -12,22 +12,6 @@ ignoreErrors = ["error-remote-getjson"]
 # Disqus 留言板
 # disqusShortname = "https-cchmark-github-io-1"
 
-# Giscus 留言板 (替代 Disqus)
-[params.giscus]
-  enable = true
-  repo = "CchMark/CchMark.github.io"
-  repoId = "R_kgDOG9v-Pg"       # 已自動取得並填入
-  category = "Announcements" # 可以是 Announcements 或您的特定討論分組
-  categoryId = "DIC_kwDOG9v-Ps4C_SWd"   # 已自動取得並填入
-  mapping = "pathname"
-  strict = "0"
-  reactionsEnabled = "1"
-  emitMetadata = "0"
-  inputPosition = "bottom"
-  theme = "preferred_color_scheme"
-  lang = "zh-TW"
-  loading = "lazy"
-
 # 效能優化設定
 enableGitInfo = false
 enableRobotsTXT = true
@@ -103,6 +87,23 @@ enableServiceWorker = true
   icon = "icon-email"
   title = "E-Mail"
   url = "mailto:markchangstart2022@gmail.com"
+
+# Giscus 留言板 (替代 Disqus)
+[params.giscus]
+  enable = true
+  repo = "CchMark/CchMark.github.io"
+  repoId = "R_kgDOG9v-Pg"
+  category = "Announcements"
+  categoryId = "DIC_kwDOG9v-Ps4C_SWd"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "zh-TW"
+  loading = "lazy"
+
 
 [menu]
 
