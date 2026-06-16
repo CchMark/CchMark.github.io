@@ -1062,3 +1062,75 @@ footer {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   9. Premium Table Styles (Light/Dark Themes)
+   ========================================================================== */
+
+table {
+  border: 1px solid var(--border-color) !important;
+  border-collapse: collapse !important;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100% !important;
+  transition: border-color 0.3s ease;
+}
+
+th, td {
+  border: 1px solid var(--border-color) !important;
+  padding: 0.75rem 1rem !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+th {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f8fafc !important;
+}
+
+tbody tr:nth-child(even) td,
+tbody tr:nth-child(even) th {
+  background-color: #ffffff !important;
+}
+
+/* Dark Mode Overrides for Table */
+[data-theme="dark"] th {
+  background-color: #262626 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] tbody tr:nth-child(odd) td,
+[data-theme="dark"] tbody tr:nth-child(odd) th {
+  background-color: #1e1e1e !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] tbody tr:nth-child(even) td,
+[data-theme="dark"] tbody tr:nth-child(even) th {
+  background-color: #141414 !important;
+  color: var(--text-color) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) th {
+    background-color: #262626 !important;
+    color: #f8fafc !important;
+  }
+  
+  :root:not([data-theme="light"]) tbody tr:nth-child(odd) td,
+  :root:not([data-theme="light"]) tbody tr:nth-child(odd) th {
+    background-color: #1e1e1e !important;
+    color: var(--text-color) !important;
+  }
+
+  :root:not([data-theme="light"]) tbody tr:nth-child(even) td,
+  :root:not([data-theme="light"]) tbody tr:nth-child(even) th {
+    background-color: #141414 !important;
+    color: var(--text-color) !important;
+  }
+}
