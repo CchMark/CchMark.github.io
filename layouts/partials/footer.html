@@ -1,0 +1,52 @@
+<footer>
+  <div>
+    <p>
+      &copy; {{ .Site.Params.copyright | default .Site.Copyright }} {{ now.Format "2006" }}
+      
+      {{ with .Site.Params.license -}}
+      &middot; <a href="{{ $.Site.Params.licenseURL }}" target="_blank">{{ . | safeHTML }}</a>
+      {{- end }}
+
+      {{ with .Site.Params.builtWith -}}
+      &middot; Built with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+      {{- end }}
+
+      <span id="busuanzi_container_site_uv">
+        &middot; 總瀏覽 <span id="busuanzi_value_site_uv"></span> 次
+      </span>
+
+      <!-- 隱私友好的瀏覽統計 - 無第三方 Cookie -->
+      <span id="privacy-pageview-counter">
+        <noscript>&middot; 感謝您的訪問！</noscript>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<!-- 隱私友好的頁面統計腳本 -->
+<script>
+(function() {
+  'use strict';
+  
+  function initPrivacyCounter() {
+    const counter = document.getElementById('privacy-pageview-counter');
+    if (!counter) return;
+    
+    const sessionKey = 'privacy-view-count';
+    let viewCount = parseInt(sessionStorage.getItem(sessionKey) || '0') + 1;
+    sessionStorage.setItem(sessionKey, viewCount.toString());
+    
+    counter.innerHTML = ` &middot; 本次訪問第 <span style="color: #007cba;">${viewCount}</span> 頁`;
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPrivacyCounter);
+  } else {
+    initPrivacyCounter();
+  }
+})();
+</script>
+
+<!-- 不蒜子統計 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{{with site.Language.Locale}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ hugo.Generator }}
+
+  <!-- 安全標頭 -->
+  {{ partial "security-headers.html" . }}
+
+  <!-- HTTPS 強制重定向 -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
+  {{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  {{- else -}}
+  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  {{- end }}
+
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+
+  {{ partial "seo.html" . }}
+
+  <!-- 預載入關鍵 DNS - 只保留必要的 -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+  <!-- 關鍵 CSS - 內聯載入以減少 TTFB -->
+  {{ partial "critical-css.html" . }}
+
+  <!-- 非關鍵 CSS - 延遲載入 -->
+  <link rel="preload" as="style" href="{{ `css/poole.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/poole.css` | relURL }}"></noscript>
+  
+  <link rel="preload" as="style" href="{{ `css/hyde.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/hyde.css` | relURL }}"></noscript>
+
+  <link rel="preload" as="style" href="{{ `css/responsive-images.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/responsive-images.css` | relURL }}"></noscript>
+
+  <!-- 修復標題字體大小問題 -->
+  <link rel="preload" as="style" href="{{ `css/heading-fix.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/heading-fix.css` | relURL }}"></noscript>
+
+  <!-- 本地圖標系統，替代 FontAwesome -->
+  <link rel="preload" as="style" href="{{ `css/local-icons.css` | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ `css/local-icons.css` | relURL }}"></noscript>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="{{ `css/print.css` | relURL }}"
+        media="print">
+
+  {{ partial "theme-color.html" . }}
+
+  {{ range $.Site.Params.customCss -}}
+  <link rel="preload" as="style" href="{{ . | relURL }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ . | relURL }}"></noscript>
+  {{- end}}
+
+  <!-- Google Fonts - 優化載入，使用 font-display -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap">
+  </noscript>
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <!-- RSS -->
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+  {{ end -}}
+</head>
+<body>
+  {{ partial "sidebar.html" . }}
+
+  <main class="content container">
+  {{ block "main" . -}}{{- end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <!-- 延遲載入 JavaScript - 移除舊 API，使用現代標準 -->
+  <script>
+    (function() {
+      'use strict';
+      
+      // 避免重複定義
+      if (window.modernScriptLoader) return;
+      window.modernScriptLoader = true;
+
+      // 現代化腳本載入器
+      function loadScript(src, callback, integrity = null) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          if (integrity) {
+            script.integrity = integrity;
+            script.crossOrigin = 'anonymous';
+          }
+          script.onload = () => {
+            if (callback) callback();
+            resolve();
+          };
+          script.onerror = () => {
+            console.error('Failed to load script:', src);
+            reject(new Error(`Script load failed: ${src}`));
+          };
+          document.head.appendChild(script);
+        });
+      }
+
+      // 當頁面載入完成後再載入非關鍵腳本
+      window.addEventListener('load', async function() {
+        const scriptsToLoad = [
+          '{{ `js/cookie-compliance.js` | relURL }}',
+          '{{ `js/performance.js` | relURL }}',
+          '{{ `js/analytics.js` | relURL }}',
+          '{{ `js/soho.js` | relURL }}',
+          '{{ `js/theme-toggle.js` | relURL }}'
+        ];
+        
+        try {
+          // 順序載入腳本
+          for (const script of scriptsToLoad) {
+            await loadScript(script);
+            // 等待腳本執行完成
+            await new Promise(resolve => setTimeout(resolve, 50));
+          }
+
+          // 只載入必要的腳本，不載入第三方 JS
+          console.log('✓ All essential scripts loaded successfully');
+        } catch (error) {
+          console.warn('Script loading failed:', error.message);
+        }
+      });
+    })();
+  </script>
+
+  {{ range $.Site.Params.customJs -}}
+  <script>
+    window.addEventListener('load', async function() {
+      try {
+        if (window.modernScriptLoader) {
+          const loadScript = function(src) {
+            return new Promise((resolve, reject) => {
+              const script = document.createElement('script');
+              script.src = src;
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.appendChild(script);
+            });
+          };
+          await loadScript('{{ . | relURL }}');
+        }
+      } catch (error) {
+        console.warn('Custom script loading failed:', error);
+      }
+    });
+  </script>
+  {{- end}}
+
+</body>
+</html>

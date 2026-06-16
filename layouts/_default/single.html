@@ -1,0 +1,47 @@
+{{ define "main" -}}
+<div class="post">
+  <h1 class="title">{{ .Title }}</h1>
+  {{ with .Params.tagline }}<span class="tagline">{{ . }}</span>{{ end }}
+
+  {{ if ne .Type "page" -}}
+  <div class="post-date">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> <span class="readtime">&middot; {{ .ReadingTime }} min read</span>
+  </div>
+  {{- end }}
+
+  <div>
+  {{ .Content }}
+  </div>
+
+  {{ partial "tags.html" . }}
+
+  {{ if (and (ne .Params.DisableShare true) (ne .Params.disable_share true)) -}}
+  {{ partial "share.html" . }}
+  {{- end }}
+ 
+  <script>
+    function payBlock() {
+        let elementPay = document.getElementById('pay');
+        if (elementPay.style.height == '0px')
+            elementPay.style.height = '360px';
+        else
+            elementPay.style.height = '0px';
+    }
+  </script>
+  <div style="color:red;text-align:center;cursor: pointer;text-decoration: underline; font-size: 24px;" onclick="payBlock()">如果喜歡可以請我喝杯咖啡，這樣我會更有動力唷XDD</div>
+  <div id="pay" style="margin-top: 20px; text-align: center; overflow: hidden; height: 0px; transition: height 0.5s ease 0s;">
+      <div style="display:inline-block; width: 200px;">
+          <img src="/images/jkosPay.jpg" border="0" alt="街口支付" loading="lazy">
+          <p style="font-size: 20px;">街口支付</p>
+          <p>街口帳號: 901526306</p>
+      </div>
+  </div>
+
+  <br>
+  </br>
+  {{ if (and site.Config.Services.Disqus.Shortname (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
+  {{ partial "disqus.html" . }}
+  {{- end }}
+
+</div>
+{{- end }}

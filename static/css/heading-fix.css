@@ -1,0 +1,97 @@
+/* 修復 H1 標題字體大小 - 解決 Lighthouse deprecated API 警告 */
+
+/* 修復 HTML5 語義元素內的 h1 字體大小問題 */
+article h1,
+section h1,
+aside h1,
+nav h1 {
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 0.67em 0;
+  font-weight: bold;
+}
+
+/* 確保 article 內的 h1 有適當的字體大小 */
+article h1,
+.post h1,
+.page h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* 響應式字體大小 */
+@media (min-width: 38em) {
+  article h1,
+  section h1,
+  aside h1,
+  nav h1,
+  .post h1,
+  .page h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 58em) {
+  article h1,
+  section h1,
+  aside h1,
+  nav h1,
+  .post h1,
+  .page h1 {
+    font-size: 3rem;
+  }
+}
+
+/* 確保標題層級正確 */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+/* 修正 heading 元素的 font-size 指定方式，使用現代標準 */
+.masthead-title,
+.sidebar-about h1 {
+  font-size: 2rem !important;
+  font-weight: 500;
+}
+
+/* 特別針對語義元素的巢狀標題 */
+article section h1,
+article aside h1,
+section article h1,
+section aside h1 {
+  font-size: 1.75em; /* 稍小於主標題 */
+}
+
+/* 確保深層巢狀的語義元素標題有適當大小 */
+article article h1,
+section section h1,
+aside aside h1,
+nav nav h1 {
+  font-size: 1.5em;
+}
+
+/* 針對具體的類別選擇器加強 */
+.post h1.title,
+.post h1.post-title,
+.section h1.title,
+.page h1.title {
+  font-size: 2em !important;
+}
+
+/* 確保所有可能的組合都被覆蓋 */
+article h1,
+section h1,
+aside h1,
+nav h1,
+main h1,
+header h1 {
+  font-size: 2em !important;
+  font-weight: bold !important;
+  line-height: 1.25 !important;
+  margin: 0.67em 0 !important;
+}

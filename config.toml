@@ -1,0 +1,135 @@
+# 網站網址 - 強制 HTTPS
+baseURL = "https://cchmark.github.io"
+# 網站名稱
+title = "The Mark Chang Life"
+# 預設語系
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+summarylength = 10
+enableEmoji = true
+paginate = 5
+ignoreErrors = ["error-remote-getjson"]
+# Disqus 留言板
+disqusShortname = "https-cchmark-github-io-1"
+
+# 效能優化設定
+enableGitInfo = false
+enableRobotsTXT = true
+canonifyURLs = true
+relativeURLs = false
+
+# 安全性設定
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+# 圖片處理優化
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# 壓縮設定
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      precision = 0
+    [minify.tdewolff.html]
+      keepDocumentTags = true
+      keepDefaultAttrVals = true
+      keepEndTags = true
+      keepWhitespace = false
+    [minify.tdewolff.js]
+      precision = 0
+
+[params]
+author = "Mark_Chang"
+description = "learn by doing, and by falling over."
+startYear = 2018
+
+## Set one of:
+# gravatar = "soho@example.com"
+profilePicture = "images/black.jpg"
+
+copyright = "Mark_Chang  All rights reserved."
+# license = "CC BY-SA 4.0"
+# licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+
+## Set custom theme color.
+# themeColor = "#fc2803"
+
+## Set custom CSS and/or JS to override site defaults.
+# 已由 layouts/_default/baseof.html 統一載入，在此設為空以避免重複載入
+customCss = []
+customJs = []
+
+# 效能優化參數
+enableGitInfo = false
+enableRobotsTXT = true
+enableServiceWorker = true
+
+  ## Set as many as you want.
+  [[params.socialIcons]]
+  icon = "icon-email"
+  title = "E-Mail"
+  url = "mailto:markchangstart2022@gmail.com"
+
+[menu]
+
+  # [[menu.main]]
+  # name = "Posts"
+  # weight = 100
+  # identifier = "posts"
+  # url = "/posts/"
+
+  # [[menu.main]]
+  # name = "Categories"
+  # weight = 200
+  # identifier = "categories"
+  # url = "/categories/"
+
+  [[menu.main]]
+  name = "Archives"
+  identifier = "archives"
+  weight = 250
+  url = "/archives/"
+
+  [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 300
+  url = "/about/"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true # if false, you need to provide you own custom CSS
+  style = "monokai"
+  tabWidth = 4

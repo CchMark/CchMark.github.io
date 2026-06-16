@@ -1,0 +1,50 @@
+{{/* 
+  安全標頭 - 包含 CSP、HSTS、COOP、XFO 等安全設定
+*/}}
+
+<!-- 內容安全政策 (CSP) - 生產環境優化設定 -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+  img-src 'self' data: https:;
+  connect-src 'self';
+  media-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  upgrade-insecure-requests;
+">
+
+<!-- 嚴格傳輸安全 (HSTS) -->
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+<!-- 內容類型選項 -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- XSS 保護 -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- 引用者政策 -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- 權限政策 -->
+<meta http-equiv="Permissions-Policy" content="
+  camera=(),
+  microphone=(),
+  geolocation=(),
+  payment=(),
+  usb=(),
+  magnetometer=(),
+  gyroscope=(),
+  accelerometer=(),
+  ambient-light-sensor=(),
+  autoplay=(),
+  battery=(),
+  display-capture=(),
+  document-domain=(),
+  encrypted-media=(),
+  fullscreen=(self),
+  picture-in-picture=()
+">
