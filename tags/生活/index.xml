@@ -1,3 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on The Mark Chang Life</title><link>https://cchmark.github.io/tags/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on The Mark Chang Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 31 Dec 2022 10:34:40 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 年度回顧</title><link>https://cchmark.github.io/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>https://cchmark.github.io/posts/20221231annualreview/</guid><description>回顧一下2022年自己都在做什麼事情XD
-技術 換新工作環境，我發現自己在資料結構和物件導向以及RESTful的相關知識不夠扎實，導致我在撰寫Code時常常有些困難或是莫名的小瓶頸。對於撰寫出來Code理解不夠透徹，以至於主管Code Review時常回答出來的內容不是夠充分和明確。因此，購買Udemy線上課程以及SkillTree課程，以彌補自己的不足。
-C# Udemy C# Basics for Beginners: Learn C# Fundamentals by Coding Master C# fundamentals in 6 hours - The most popular course with 50,000+ students, packed with tips and exercises!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on The Mark Chang Life</title><link>https://cchmark.github.io/tags/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 31 Dec 2022 10:34:40 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 年度回顧</title><link>https://cchmark.github.io/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>https://cchmark.github.io/posts/20221231annualreview/</guid><description>&lt;p&gt;回顧一下2022年自己都在做什麼事情XD&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="技術"&gt;&lt;strong&gt;技術&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;換新工作環境，我發現自己在資料結構和物件導向以及RESTful的相關知識不夠扎實，導致我在撰寫Code時常常有些困難或是莫名的小瓶頸。對於撰寫出來Code理解不夠透徹，以至於主管Code Review時常回答出來的內容不是夠充分和明確。因此，購買Udemy線上課程以及SkillTree課程，以彌補自己的不足。&lt;/p&gt;
+&lt;h2 id="c"&gt;&lt;strong&gt;C#&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id="udemy"&gt;Udemy&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C# Basics for Beginners: Learn C# Fundamentals by Coding
+Master C# fundamentals in 6 hours - The most popular course with 50,000+ students, packed with tips and exercises!&lt;/li&gt;
+&lt;li&gt;C# Intermediate: Classes, Interfaces and OOP
+An in-depth, step-by-step guide to classes, interfaces and object-oriented programming (OOP) with C#&lt;/li&gt;
+&lt;li&gt;C# Advanced Topics: Prepare for Technical Interviews
+Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ, Async/Await and more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ&lt;/p&gt;</description></item></channel></rss>

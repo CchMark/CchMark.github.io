@@ -1,1 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ASP.NET Code MVC on The Mark Chang Life</title><link>https://cchmark.github.io/tags/asp.net-code-mvc/</link><description>Recent content in ASP.NET Code MVC on The Mark Chang Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Dec 2022 14:39:05 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/asp.net-code-mvc/index.xml" rel="self" type="application/rss+xml"/><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</guid><description>Partial View 部分檢視 主要應用於HTML重用,由於Partial View 無法取得Model需要透過外部呼叫 透過Model傳遞才能取得資料綁定 通常預設情境下子類別會自動繼承父類別的Model 呼叫方式: //tag helper &amp;lt;partial name=&amp;#34;something&amp;#34;&amp;gt; //html helper 個人偏好使用這個XD @Html.</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>https://cchmark.github.io/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvc/</guid><description>.NET 6 如何讀取AppSettings AppSettings 由於.Net code 捨棄 Web.config 改為前端常用的JSON格式作為設定檔 好處的部分:</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>https://cchmark.github.io/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221207net6codemvc/</guid><description>什麼是MVC MVC 是三個部分組成的 Model 模型 View 檢視 Controller 控制器 Model 模型 主要資料處理的部分.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ASP.NET Code MVC on The Mark Chang Life</title><link>https://cchmark.github.io/tags/asp.net-code-mvc/</link><description>Recent content in ASP.NET Code MVC on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 08 Dec 2022 14:39:05 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/asp.net-code-mvc/index.xml" rel="self" type="application/rss+xml"/><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</guid><description>&lt;h1 id="partial-view-部分檢視"&gt;Partial View 部分檢視&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;主要應用於HTML重用,由於Partial View 無法取得Model需要透過外部呼叫&lt;/li&gt;
+&lt;li&gt;透過Model傳遞才能取得資料綁定
+&lt;ul&gt;
+&lt;li&gt;通常預設情境下子類別會自動繼承父類別的Model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;呼叫方式:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//tag helper&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#66d9ef"&gt;partial&lt;/span&gt; name=&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//html helper 個人偏好使用這個XD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; @Html.Partial(&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;##範例&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>https://cchmark.github.io/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvc/</guid><description>&lt;h1 id="net-6-如何讀取appsettings"&gt;.NET 6 如何讀取AppSettings&lt;/h1&gt;
+&lt;h2 id="appsettings"&gt;AppSettings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;由於.Net code 捨棄 Web.config 改為前端常用的JSON格式作為設定檔&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好處的部分:&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>https://cchmark.github.io/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221207net6codemvc/</guid><description>&lt;h1 id="什麼是mvc"&gt;什麼是MVC&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;MVC 是三個部分組成的
+&lt;ul&gt;
+&lt;li&gt;Model 模型&lt;/li&gt;
+&lt;li&gt;View 檢視&lt;/li&gt;
+&lt;li&gt;Controller 控制器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="model-模型"&gt;Model 模型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;主要資料處理的部分.
+另外,如果ModelBind有問題時,先確認欄位名稱,欄位名稱對不上就接不到資料,因此就不需進Controller查問題.
+&lt;ul&gt;
+&lt;li&gt;資料庫的存取(讀/寫)&lt;/li&gt;
+&lt;li&gt;資料結構定義&lt;/li&gt;
+&lt;li&gt;資料格式驗證&lt;/li&gt;
+&lt;li&gt;資料源頭&lt;/li&gt;
+&lt;li&gt;DAO(Data Access Object 資料訪問物件)&lt;/li&gt;
+&lt;li&gt;DTO(Data Transfer Object 資料傳遞物件)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="view-檢視"&gt;View 檢視&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;主要是呈現網頁畫面顯示以及傳遞資料給後端.
+除此之外,不要有過多的邏輯和運算寫在View.
+&lt;ul&gt;
+&lt;li&gt;輸出: 資料輸出並顯示畫面
+&lt;ul&gt;
+&lt;li&gt;HTML,CSS,JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;輸入: 畫面輸入的資料傳回後端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="controller-控制器"&gt;Controller 控制器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責接收資料和傳遞資料的部分
+&lt;ul&gt;
+&lt;li&gt;控制整體的業務流程&lt;/li&gt;
+&lt;li&gt;依據規範的格式對資料處理以及View的呈現&lt;/li&gt;
+&lt;li&gt;控制器接收外部傳入的資料並與Model進行資料處理後決定使用哪種View呈現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="結論"&gt;結論&lt;/h2&gt;
+&lt;p&gt;透過MVC有效實現關注點分離,利於團隊分工.&lt;/p&gt;</description></item></channel></rss>

@@ -1,2 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on The Mark Chang Life</title><link>https://cchmark.github.io/categories/javascript/</link><description>Recent content in JavaScript on The Mark Chang Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 16 May 2023 19:45:23 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>20230516 TypeScript Note</title><link>https://cchmark.github.io/posts/20230516diary/</link><pubDate>Tue, 16 May 2023 19:45:23 +0800</pubDate><guid>https://cchmark.github.io/posts/20230516diary/</guid><description>型別 主要分別有物件型別 (Object Type)以及原始型別 (Primitive Type) 物件型別 物件型別的特性是能有屬性 (Property)
-原生物件(Native):函式(Function)、陣列(Array)、日期(Date)等&amp;hellip; 宿主物件 (Host Objects)： Window、Document、Navigator等&amp;hellip; 建立物件 var car = {}; //物件 (Object) 擴充屬性 car.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on The Mark Chang Life</title><link>https://cchmark.github.io/categories/javascript/</link><description>Recent content in JavaScript on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 16 May 2023 19:45:23 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>20230516 TypeScript Note</title><link>https://cchmark.github.io/posts/20230516diary/</link><pubDate>Tue, 16 May 2023 19:45:23 +0800</pubDate><guid>https://cchmark.github.io/posts/20230516diary/</guid><description>&lt;h1 id="型別"&gt;型別&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;主要分別有物件型別 (Object Type)以及原始型別 (Primitive Type)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="物件型別"&gt;物件型別&lt;/h2&gt;
+&lt;p&gt;物件型別的特性是能有屬性 (Property)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原生物件(Native):函式(Function)、陣列(Array)、日期(Date)等&amp;hellip;&lt;/li&gt;
+&lt;li&gt;宿主物件 (Host Objects)： Window、Document、Navigator等&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;建立物件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; car = {}; &lt;span style="color:#75715e"&gt;//物件 (Object)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;擴充屬性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; car.model = &lt;span style="color:#e6db74"&gt;&amp;#34;BMW&amp;#34;&lt;/span&gt;; &lt;span style="color:#75715e"&gt;// 屬性 (Property)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; car.start = function ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; { &lt;span style="color:#75715e"&gt;// 函式 (Function)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;OK&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="原始型別-primitive-type"&gt;原始型別 (Primitive Type)&lt;/h2&gt;
+&lt;p&gt;原始型別的特性是不能有屬性(Property)
+-原始型別 (Primitive Type):string (字串)、number (數值)、boolean (布林值)、null、undefined、Symbol。&lt;/p&gt;</description></item></channel></rss>

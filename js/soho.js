@@ -1,66 +1,47 @@
-// 確保 jQuery 載入後再執行
+// Soho 主題分享功能 - 原生 JavaScript 版本
 (function() {
   'use strict';
   
   function initSoho() {
-    if (typeof $ === 'undefined') {
-      console.warn('jQuery not loaded, retrying in 100ms...');
-      setTimeout(initSoho, 100);
-      return;
-    }
+    // 定義社群分享處理邏輯
+    const shareServices = {
+      'twitter-share-button': function(url, text) {
+        return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+      },
+      'linkedin-share-button': function(url) {
+        return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+      },
+      'facebook-share-button': function(url) {
+        return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      },
+      'telegram-share-button': function(url, text) {
+        return `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+      },
+      'pinterest-share-button': function(url, text) {
+        return `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=&description=${encodeURIComponent(text)}`;
+      }
+    };
 
-    $(document).ready(function(){
+    // 綁定點擊事件
+    Object.keys(shareServices).forEach(function(className) {
+      const buttons = document.querySelectorAll('.' + className);
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = btn.getAttribute('data-url') || window.location.href;
+          const text = btn.getAttribute('data-text') || document.title;
+          const shareUrl = shareServices[className](url, text);
+          window.open(shareUrl, '_blank').focus();
+        });
+      });
+    });
+  }
 
-  $(".twitter-share-button").click(function (e) {
-    e.preventDefault();
-    var self = $(this);
-    var url = encodeURIComponent(self.data("url"));
-    var text = encodeURIComponent(self.data("text"));
+  // 當 DOM 準備就緒時載入
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSoho);
+  } else {
+    initSoho();
+  }
+})();
 
-    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank").focus();
-  });
-
-  $(".linkedin-share-button").click(function (e) {
-    e.preventDefault();
-    var self = $(this);
-    var url = encodeURIComponent(self.data("url"));
-    // var text = encodeURIComponent(self.data("text"));
-
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, "_blank").focus();
-  });
-
-  $(".facebook-share-button").click(function (e) {
-    e.preventDefault();
-    var self = $(this);
-    var url = encodeURIComponent(self.data("url"));
-    // var text = encodeURIComponent(self.data("text"));
-
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank").focus();
-  });
-
-  $(".telegram-share-button").click(function (e) {
-    e.preventDefault();
-    var self = $(this);
-    var url = encodeURIComponent(self.data("url"));
-    var text = encodeURIComponent(self.data("text"));
-
-    window.open(`https://t.me/share/url?url=${url}&text=${text}`, "_blank").focus();
-  });
-
-  $(".pinterest-share-button").click(function (e) {
-    e.preventDefault();
-    var self = $(this);
-    var url = encodeURIComponent(self.data("url"));
-    var text = encodeURIComponent(self.data("text"));
-
-    window.open(`https://pinterest.com/pin/create/button/?url=${url}&media=&description=${text}`, "_blank").focus();
-  });
-
-  }); // $(document).ready 結束
-  
-  } // initSoho 函數結束
-  
-  // 開始初始化
-  initSoho();
-  
-})(); // IIFE 結束
