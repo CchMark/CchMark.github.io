@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C Sharp on The Mark Chang Life</title><link>http://localhost:1313/categories/c-sharp/</link><description>Recent content in C Sharp on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 08 Dec 2022 14:39:05 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/c-sharp/index.xml" rel="self" type="application/rss+xml"/><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>http://localhost:1313/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>http://localhost:1313/posts/20221208net6codemvcbypartialview/</guid><description>&lt;h1 id="partial-view-部分檢視"&gt;Partial View 部分檢視&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C Sharp on The Mark Chang Life</title><link>https://cchmark.github.io/categories/c-sharp/</link><description>Recent content in C Sharp on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 08 Dec 2022 14:39:05 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/categories/c-sharp/index.xml" rel="self" type="application/rss+xml"/><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2-2</title><link>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</link><pubDate>Thu, 08 Dec 2022 14:39:05 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvcbypartialview/</guid><description>&lt;h1 id="partial-view-部分檢視"&gt;Partial View 部分檢視&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;主要應用於HTML重用,由於Partial View 無法取得Model需要透過外部呼叫&lt;/li&gt;
 &lt;li&gt;透過Model傳遞才能取得資料綁定
@@ -12,12 +12,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#66d9ef"&gt;partial&lt;/span&gt; name=&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//html helper 個人偏好使用這個XD&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; @Html.Partial(&lt;span style="color:#e6db74"&gt;&amp;#34;something&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;##範例&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>http://localhost:1313/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>http://localhost:1313/posts/20221208net6codemvc/</guid><description>&lt;h1 id="net-6-如何讀取appsettings"&gt;.NET 6 如何讀取AppSettings&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;##範例&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 2</title><link>https://cchmark.github.io/posts/20221208net6codemvc/</link><pubDate>Thu, 08 Dec 2022 09:46:01 +0800</pubDate><guid>https://cchmark.github.io/posts/20221208net6codemvc/</guid><description>&lt;h1 id="net-6-如何讀取appsettings"&gt;.NET 6 如何讀取AppSettings&lt;/h1&gt;
 &lt;h2 id="appsettings"&gt;AppSettings&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;由於.Net code 捨棄 Web.config 改為前端常用的JSON格式作為設定檔&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;好處的部分:&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>http://localhost:1313/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>http://localhost:1313/posts/20221207net6codemvc/</guid><description>&lt;h1 id="什麼是mvc"&gt;什麼是MVC&lt;/h1&gt;
+&lt;p&gt;好處的部分:&lt;/p&gt;</description></item><item><title>ASP.NET Core 6 Mvc 學習筆記 Day 1</title><link>https://cchmark.github.io/posts/20221207net6codemvc/</link><pubDate>Wed, 07 Dec 2022 14:15:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221207net6codemvc/</guid><description>&lt;h1 id="什麼是mvc"&gt;什麼是MVC&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;MVC 是三個部分組成的
 &lt;ul&gt;
@@ -66,7 +66,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="結論"&gt;結論&lt;/h2&gt;
-&lt;p&gt;透過MVC有效實現關注點分離,利於團隊分工.&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>http://localhost:1313/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>http://localhost:1313/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
+&lt;p&gt;透過MVC有效實現關注點分離,利於團隊分工.&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>https://cchmark.github.io/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>https://cchmark.github.io/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dapper Transaction 範例&lt;/li&gt;
 &lt;/ul&gt;
@@ -131,7 +131,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		connection.BulkInsert(customers);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>如何應用Dapper</title><link>http://localhost:1313/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>http://localhost:1313/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>如何應用Dapper</title><link>https://cchmark.github.io/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>https://cchmark.github.io/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Customer&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; CustomerID		{&lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;;&lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;;}
@@ -173,13 +173,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; parameters.Add(&lt;span style="color:#e6db74"&gt;&amp;#34;CustomerName&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; result = connection.Execute(sqlCustomerInsert,parameters)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>http://localhost:1313/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>http://localhost:1313/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>https://cchmark.github.io/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>https://cchmark.github.io/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
 &lt;p&gt;工作上常聽到Dapper，但不知道這個套件實際如何使用，所以寫一篇學習筆記XD&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="dapper介紹"&gt;Dapper介紹&lt;/h2&gt;
-&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>http://localhost:1313/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>http://localhost:1313/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
+&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>https://cchmark.github.io/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
 &lt;h2 id="yield-return-介紹"&gt;Yield Return 介紹&lt;/h2&gt;
-&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>http://localhost:1313/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>http://localhost:1313/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
+&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>https://cchmark.github.io/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>https://cchmark.github.io/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
 &lt;h2 id="txt-讀檔"&gt;TXT 讀檔&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; checkToken()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -244,9 +244,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Console.WriteLine(&lt;span style="color:#e6db74"&gt;&amp;#34;The content of the profile is incorrect, please confirm!\n&amp;#34;&lt;/span&gt; + ex.Message);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>辦別IEnumerable和List用途</title><link>http://localhost:1313/posts/20221104csharppart2/</link><pubDate>Fri, 04 Nov 2022 16:01:16 +0800</pubDate><guid>http://localhost:1313/posts/20221104csharppart2/</guid><description>&lt;h1 id="ienumerable-和-list-區別"&gt;IEnumerable 和 List 區別&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>辦別IEnumerable和List用途</title><link>https://cchmark.github.io/posts/20221104csharppart2/</link><pubDate>Fri, 04 Nov 2022 16:01:16 +0800</pubDate><guid>https://cchmark.github.io/posts/20221104csharppart2/</guid><description>&lt;h1 id="ienumerable-和-list-區別"&gt;IEnumerable 和 List 區別&lt;/h1&gt;
 &lt;h2 id="ienumerable-與-list-差異"&gt;IEnumerable 與 List 差異&lt;/h2&gt;
-&lt;p&gt;C# 中 IEnumerable 和 List 的主要區別在於 IEnumerable 是一個介面，而 List 是一個具體的class可以new 出來實作。此外， IEnumerable 是只讀的，而 List 不是。 List 提供Add、Clear、Contains、IndexOf、RemoveAt、Count等方法，而 IEnumerable 提供了一個介面來接收集合資料，用於逐一讀取集合中的資料內容（枚舉）。&lt;/p&gt;</description></item><item><title>C# 透過Linq實作分頁功能</title><link>http://localhost:1313/posts/20221104csharp/</link><pubDate>Fri, 04 Nov 2022 11:19:03 +0800</pubDate><guid>http://localhost:1313/posts/20221104csharp/</guid><description>&lt;h1 id="c-如何做分頁"&gt;C# 如何做分頁&lt;/h1&gt;
+&lt;p&gt;C# 中 IEnumerable 和 List 的主要區別在於 IEnumerable 是一個介面，而 List 是一個具體的class可以new 出來實作。此外， IEnumerable 是只讀的，而 List 不是。 List 提供Add、Clear、Contains、IndexOf、RemoveAt、Count等方法，而 IEnumerable 提供了一個介面來接收集合資料，用於逐一讀取集合中的資料內容（枚舉）。&lt;/p&gt;</description></item><item><title>C# 透過Linq實作分頁功能</title><link>https://cchmark.github.io/posts/20221104csharp/</link><pubDate>Fri, 04 Nov 2022 11:19:03 +0800</pubDate><guid>https://cchmark.github.io/posts/20221104csharp/</guid><description>&lt;h1 id="c-如何做分頁"&gt;C# 如何做分頁&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//每頁顯示資料&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pageSize = &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//頁碼 初始0 為 畫面呈現時的第一頁&lt;/span&gt;
@@ -267,7 +267,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pageNum++;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>http://localhost:1313/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>http://localhost:1313/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>https://cchmark.github.io/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>https://cchmark.github.io/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
 &lt;p&gt;筆記一下~&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; client = &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; RestClient(&lt;span style="color:#e6db74"&gt;&amp;#34;http://example.com&amp;#34;&lt;/span&gt;);
@@ -333,7 +333,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//按需中止請求&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// abort the request on demand&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;asyncHandle.Abort();
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>http://localhost:1313/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>http://localhost:1313/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>https://cchmark.github.io/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>https://cchmark.github.io/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
 &lt;p&gt;筆記一下NPOI 轉 DataTable 字串之中有換行符號導致提前讀取結束，指定結束位置的對應字串&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; DataTable CsvToDataTableByNewEgg(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; fileName)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -396,7 +396,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; dataTable;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>http://localhost:1313/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>http://localhost:1313/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>https://cchmark.github.io/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//限制必須使用執行個體方法或是擴充方法的狀況 集合初始設定式的 Add 擴充方法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; Main(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt;[] args)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -431,7 +431,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; Age { &lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>http://localhost:1313/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>http://localhost:1313/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>https://cchmark.github.io/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>https://cchmark.github.io/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
 &lt;h2 id="集合有兩種使用方式"&gt;集合有兩種使用方式&lt;/h2&gt;
 &lt;h3 id="1建立物件的陣列array"&gt;1.建立物件的陣列(Array)&lt;/h3&gt;
 &lt;ul&gt;
@@ -448,7 +448,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id="從陣列array取得資料"&gt;從陣列(Array)取得資料&lt;/h2&gt;
-&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>http://localhost:1313/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>http://localhost:1313/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
+&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>https://cchmark.github.io/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>https://cchmark.github.io/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
 &lt;h2 id="參考型別reference-type"&gt;參考型別(Reference Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -501,7 +501,7 @@
 &lt;h2 id="實值型別value-type"&gt;實值型別(Value Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>http://localhost:1313/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>http://localhost:1313/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
+&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>https://cchmark.github.io/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>https://cchmark.github.io/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
 &lt;p&gt;We replaced the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bundles.Add(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ScriptBundle(&lt;span style="color:#e6db74"&gt;&amp;#34;~/bundles/mybundle&amp;#34;&lt;/span&gt;).Include(
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/Scripts/...&amp;#34;&lt;/span&gt;,
