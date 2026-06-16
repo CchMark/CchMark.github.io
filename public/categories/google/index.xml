@@ -1,53 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on The Mark Chang Life</title><link>http://localhost:1313/categories/google/</link><description>Recent content in Google on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 11 Feb 2023 20:15:18 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/google/index.xml" rel="self" type="application/rss+xml"/><item><title>前端效能調校筆記 Part 2</title><link>http://localhost:1313/posts/20230211part2/</link><pubDate>Sat, 11 Feb 2023 20:15:18 +0800</pubDate><guid>http://localhost:1313/posts/20230211part2/</guid><description>&lt;h1 id="核心web指標---core-web-vitals"&gt;核心Web指標 - Core Web Vitals&lt;/h1&gt;
-&lt;p&gt;2020年指標重點著重用戶體驗的三個面向:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;最大內容繪製(LCP)(Largest Contentful Paint)
-&lt;ul&gt;
-&lt;li&gt;頁面的 LCP 應在頁面開始加載的 2.5 秒內出現，用來評估載入性能
-&lt;ul&gt;
-&lt;li&gt;優化 LCP 的建議:
-&lt;ul&gt;
-&lt;li&gt;使用 PRPL Pattern 達到即時載入&lt;/li&gt;
-&lt;li&gt;優化渲染路徑&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;首次輸入延遲 (FID) (First Input Delay)
-&lt;ul&gt;
-&lt;li&gt;頁面的 FID 應小於 100 毫秒，用來評估網頁的可互動性
-&lt;ul&gt;
-&lt;li&gt;優化 FID 的建議:
-&lt;ul&gt;
-&lt;li&gt;減少第三方程式的影響&lt;/li&gt;
-&lt;li&gt;減少 JavaScript 執行時間&lt;/li&gt;
-&lt;li&gt;最小化主執行緒的工作&lt;/li&gt;
-&lt;li&gt;減少傳輸檔案的大小&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;累積佈局偏移 (CLS) (Cumulative Layout Shift)
-&lt;ul&gt;
-&lt;li&gt;頁面的 CLS 應保持在 0.1 以下，用來評估視覺穩定性
-&lt;ul&gt;
-&lt;li&gt;優化 CLS 的建議:
-&lt;ul&gt;
-&lt;li&gt;預先指定圖片或影片的尺寸&lt;/li&gt;
-&lt;li&gt;盡量不要在目前畫面的上方插入新的內容&lt;/li&gt;
-&lt;li&gt;使用 CSS 轉換動畫&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>前端效能調校筆記 Part 1</title><link>http://localhost:1313/posts/20230211/</link><pubDate>Sat, 11 Feb 2023 20:14:18 +0800</pubDate><guid>http://localhost:1313/posts/20230211/</guid><description>&lt;h1 id="前端常見專有名詞"&gt;前端常見專有名詞&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on The Mark Chang Life</title><link>https://cchmark.github.io/categories/google/</link><description>Recent content in Google on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 11 Feb 2023 20:14:18 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/categories/google/index.xml" rel="self" type="application/rss+xml"/><item><title>前端效能調校筆記 Part 1</title><link>https://cchmark.github.io/posts/20230211/</link><pubDate>Sat, 11 Feb 2023 20:14:18 +0800</pubDate><guid>https://cchmark.github.io/posts/20230211/</guid><description>&lt;h1 id="前端常見專有名詞"&gt;前端常見專有名詞&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;AVIF : 是一種圖像格式，旨在提供比 JPEG 和 PNG 更高的圖像質量和更快的加載速度。&lt;/li&gt;
 &lt;li&gt;Chrome 用戶體驗報告 CrUX :（Chrome User Experience Report）是由 Google 收集的全球用戶體驗數據，旨在幫助開發人員了解他們網站的性能和用戶體驗。&lt;/li&gt;
@@ -93,11 +44,11 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>建置GoogleCloud環境</title><link>http://localhost:1313/posts/20221227concatenatedgooglesheetapi/</link><pubDate>Tue, 27 Dec 2022 10:44:49 +0800</pubDate><guid>http://localhost:1313/posts/20221227concatenatedgooglesheetapi/</guid><description>&lt;p&gt;→&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.accupass.com/event/2212150911047466858010"&gt; Will 保哥~前端效能調校實戰：使用 Lighthouse 改善你的網站瀏覽體驗&lt;/a&gt;&lt;/p&gt;</description></item><item><title>建置GoogleCloud環境</title><link>https://cchmark.github.io/posts/20221227concatenatedgooglesheetapi/</link><pubDate>Tue, 27 Dec 2022 10:44:49 +0800</pubDate><guid>https://cchmark.github.io/posts/20221227concatenatedgooglesheetapi/</guid><description>&lt;p&gt;→&lt;/p&gt;
 &lt;h1 id="googlesheet-環境建置"&gt;GoogleSheet 環境建置&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;STEP 1 : 建立GOOGLE Cloud
 先建立專案 &lt;a href="https://console.cloud.google.com/apis/dashboard"&gt;https://console.cloud.google.com/apis/dashboard&lt;/a&gt;
 第一次使用的可能會看到這個先同意即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src="http://localhost:1313/images/GoogleSheetFile/demo1.png" alt="1"&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;img src="https://cchmark.github.io/images/GoogleSheetFile/demo1.png" alt="1"&gt;&lt;/p&gt;</description></item></channel></rss>

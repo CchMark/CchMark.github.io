@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術 on The Mark Chang Life</title><link>http://localhost:1313/tags/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 31 Dec 2022 10:34:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 年度回顧</title><link>http://localhost:1313/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>http://localhost:1313/posts/20221231annualreview/</guid><description>&lt;p&gt;回顧一下2022年自己都在做什麼事情XD&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術 on The Mark Chang Life</title><link>https://cchmark.github.io/tags/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on The Mark Chang Life</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 31 Dec 2022 10:34:40 +0800</lastBuildDate><atom:link href="https://cchmark.github.io/tags/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 年度回顧</title><link>https://cchmark.github.io/posts/20221231annualreview/</link><pubDate>Sat, 31 Dec 2022 10:34:40 +0800</pubDate><guid>https://cchmark.github.io/posts/20221231annualreview/</guid><description>&lt;p&gt;回顧一下2022年自己都在做什麼事情XD&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="技術"&gt;&lt;strong&gt;技術&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;換新工作環境，我發現自己在資料結構和物件導向以及RESTful的相關知識不夠扎實，導致我在撰寫Code時常常有些困難或是莫名的小瓶頸。對於撰寫出來Code理解不夠透徹，以至於主管Code Review時常回答出來的內容不是夠充分和明確。因此，購買Udemy線上課程以及SkillTree課程，以彌補自己的不足。&lt;/p&gt;
@@ -12,7 +12,7 @@ An in-depth, step-by-step guide to classes, interfaces and object-oriented progr
 &lt;li&gt;C# Advanced Topics: Prepare for Technical Interviews
 Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ, Async/Await and more!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>http://localhost:1313/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>http://localhost:1313/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
+&lt;p&gt;如果不知道如何學習C#，建議購買這三門線上課觀看，可以學習豐富的開發技巧和相關C#的基礎知識。雖然是英文字幕看起來很吃力，但可以透過google翻譯字幕並雙螢幕比對觀看，是還蠻方便的，如果它有出中文字幕就完美了QQ&lt;/p&gt;</description></item><item><title>Dapper 常用語法</title><link>https://cchmark.github.io/posts/20221206csharpbydapper/</link><pubDate>Tue, 06 Dec 2022 09:56:44 +0800</pubDate><guid>https://cchmark.github.io/posts/20221206csharpbydapper/</guid><description>&lt;h1 id="使用dapper-transaction-和-bulk-insert-介紹"&gt;使用Dapper Transaction 和 Bulk Insert 介紹&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dapper Transaction 範例&lt;/li&gt;
 &lt;/ul&gt;
@@ -77,7 +77,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		connection.BulkInsert(customers);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>如何應用Dapper</title><link>http://localhost:1313/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>http://localhost:1313/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>如何應用Dapper</title><link>https://cchmark.github.io/posts/20221124csarpbydapper/</link><pubDate>Thu, 24 Nov 2022 16:04:39 +0800</pubDate><guid>https://cchmark.github.io/posts/20221124csarpbydapper/</guid><description>&lt;h1 id="dappar-常用方法"&gt;Dappar 常用方法&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Customer&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; CustomerID		{&lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;;&lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;;}
@@ -119,13 +119,13 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; parameters.Add(&lt;span style="color:#e6db74"&gt;&amp;#34;CustomerName&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; result = connection.Execute(sqlCustomerInsert,parameters)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>http://localhost:1313/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>http://localhost:1313/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Dapper是什麼?</title><link>https://cchmark.github.io/posts/20221117csharp/</link><pubDate>Thu, 17 Nov 2022 10:41:06 +0800</pubDate><guid>https://cchmark.github.io/posts/20221117csharp/</guid><description>&lt;h1 id="aspnet-dapper-介紹"&gt;ASP.NET Dapper 介紹&lt;/h1&gt;
 &lt;p&gt;工作上常聽到Dapper，但不知道這個套件實際如何使用，所以寫一篇學習筆記XD&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="dapper介紹"&gt;Dapper介紹&lt;/h2&gt;
-&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>http://localhost:1313/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>http://localhost:1313/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
+&lt;p&gt;Dapper是Microsoft .NET平台的物件關聯對應ORM(object-relational mapping)套件：它提供了一個將對象資料映射到資料庫的框架。Dapper 是免費的開源軟件，在License部分為Apache License 2.0或MIT License 可以安心使用XD&lt;/p&gt;</description></item><item><title>C# 語法糖 yield return</title><link>https://cchmark.github.io/posts/20221110csharp/</link><pubDate>Thu, 10 Nov 2022 09:27:19 +0800</pubDate><guid>https://cchmark.github.io/posts/20221110csharp/</guid><description>&lt;h1 id="c-yield-return"&gt;C# Yield Return&lt;/h1&gt;
 &lt;h2 id="yield-return-介紹"&gt;Yield Return 介紹&lt;/h2&gt;
-&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>http://localhost:1313/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>http://localhost:1313/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
+&lt;p&gt;Yield 是指 Microsoft .Net 中用來實作 iterator(迭代器) 設計模式的語法糖，透過編輯器自動產生的IEnumerator衍生類別，並且實作方法。&lt;/p&gt;</description></item><item><title>C# 常用讀寫筆記</title><link>https://cchmark.github.io/posts/20221107csharp/</link><pubDate>Mon, 07 Nov 2022 11:33:55 +0800</pubDate><guid>https://cchmark.github.io/posts/20221107csharp/</guid><description>&lt;h1 id="c讀寫檔應用"&gt;C#讀寫檔應用&lt;/h1&gt;
 &lt;h2 id="txt-讀檔"&gt;TXT 讀檔&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; checkToken()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -190,7 +190,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Console.WriteLine(&lt;span style="color:#e6db74"&gt;&amp;#34;The content of the profile is incorrect, please confirm!\n&amp;#34;&lt;/span&gt; + ex.Message);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>http://localhost:1313/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>http://localhost:1313/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# RestSharp套件 筆記</title><link>https://cchmark.github.io/posts/20221102csharp/</link><pubDate>Wed, 02 Nov 2022 11:29:41 +0800</pubDate><guid>https://cchmark.github.io/posts/20221102csharp/</guid><description>&lt;h1 id="restsharp-應用說明"&gt;RestSharp 應用說明&lt;/h1&gt;
 &lt;p&gt;筆記一下~&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; client = &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; RestClient(&lt;span style="color:#e6db74"&gt;&amp;#34;http://example.com&amp;#34;&lt;/span&gt;);
@@ -256,7 +256,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;//按需中止請求&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// abort the request on demand&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;asyncHandle.Abort();
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>http://localhost:1313/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>http://localhost:1313/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# NPOI 應用</title><link>https://cchmark.github.io/posts/20221024csharp/</link><pubDate>Mon, 24 Oct 2022 15:32:12 +0800</pubDate><guid>https://cchmark.github.io/posts/20221024csharp/</guid><description>&lt;h1 id="csvtodatatable-指定某字串為結束位置"&gt;CSVToDataTable 指定某字串為結束位置&lt;/h1&gt;
 &lt;p&gt;筆記一下NPOI 轉 DataTable 字串之中有換行符號導致提前讀取結束，指定結束位置的對應字串&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; DataTable CsvToDataTableByNewEgg(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt; fileName)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -319,7 +319,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; dataTable;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>http://localhost:1313/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>http://localhost:1313/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 簡化List 新增資料 小技巧</title><link>https://cchmark.github.io/posts/20221003csharp/</link><pubDate>Mon, 03 Oct 2022 15:11:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20221003csharp/</guid><description>&lt;h1 id="c-list-add-擴充方法-小技巧"&gt;C# List Add 擴充方法 小技巧&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//限制必須使用執行個體方法或是擴充方法的狀況 集合初始設定式的 Add 擴充方法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; Main(&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt;[] args)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
@@ -354,7 +354,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; Age { &lt;span style="color:#66d9ef"&gt;get&lt;/span&gt;; &lt;span style="color:#66d9ef"&gt;set&lt;/span&gt;; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>http://localhost:1313/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>http://localhost:1313/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# 何謂集合(Collections)</title><link>https://cchmark.github.io/posts/20220926csharp/</link><pubDate>Mon, 26 Sep 2022 10:16:57 +0800</pubDate><guid>https://cchmark.github.io/posts/20220926csharp/</guid><description>&lt;h1 id="c-何謂集合collections"&gt;C# 何謂集合(Collections)&lt;/h1&gt;
 &lt;h2 id="集合有兩種使用方式"&gt;集合有兩種使用方式&lt;/h2&gt;
 &lt;h3 id="1建立物件的陣列array"&gt;1.建立物件的陣列(Array)&lt;/h3&gt;
 &lt;ul&gt;
@@ -371,7 +371,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id="從陣列array取得資料"&gt;從陣列(Array)取得資料&lt;/h2&gt;
-&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>http://localhost:1313/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>http://localhost:1313/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
+&lt;p&gt;透過索引取得陣列的資料&lt;/p&gt;</description></item><item><title>C# .NET 型別</title><link>https://cchmark.github.io/posts/20220920csharpoop/</link><pubDate>Tue, 20 Sep 2022 10:24:24 +0800</pubDate><guid>https://cchmark.github.io/posts/20220920csharpoop/</guid><description>&lt;h1 id="c-net-型別"&gt;C# .NET 型別&lt;/h1&gt;
 &lt;h2 id="參考型別reference-type"&gt;參考型別(Reference Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -424,7 +424,7 @@ Master the confusing C# constructs: Events, Delegates, Lambda Expressions, LINQ,
 &lt;h2 id="實值型別value-type"&gt;實值型別(Value Type)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part3</title><link>http://localhost:1313/posts/20220704python_learning_part3/</link><pubDate>Mon, 04 Jul 2022 14:04:00 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning_part3/</guid><description>&lt;p&gt;#居家上班滑鼠自動移動位置&lt;/p&gt;
+&lt;p&gt;實值型別的變數，依據預設在指派時，將引數傳遞至方法，並傳回方法結果時，會複製變數值。 在實值型別變數的情況下，會複製對應的類型實例。&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part3</title><link>https://cchmark.github.io/posts/20220704python_learning_part3/</link><pubDate>Mon, 04 Jul 2022 14:04:00 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning_part3/</guid><description>&lt;p&gt;#居家上班滑鼠自動移動位置&lt;/p&gt;
 &lt;h2 id="1套件安裝"&gt;1.套件安裝&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;pip install pynput&lt;/code&gt;
 &lt;code&gt;pip install pyautogui&lt;/code&gt;&lt;/p&gt;
@@ -446,13 +446,13 @@ while 1:
  1, s[1]), duration=2, tween=pyautogui.easeInOutQuad) # 隨機移動到屏幕長寬內的位置
  print(a)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10263995"&gt;參考文章&lt;/a&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part2</title><link>http://localhost:1313/posts/20220704python_learning_part2/</link><pubDate>Mon, 04 Jul 2022 13:20:59 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning_part2/</guid><description>&lt;h1 id="selenium--webdriver-安裝"&gt;Selenium + WebDriver 安裝&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10263995"&gt;參考文章&lt;/a&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning_Part2</title><link>https://cchmark.github.io/posts/20220704python_learning_part2/</link><pubDate>Mon, 04 Jul 2022 13:20:59 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning_part2/</guid><description>&lt;h1 id="selenium--webdriver-安裝"&gt;Selenium + WebDriver 安裝&lt;/h1&gt;
 &lt;h2 id="1selenium-安裝"&gt;1.Selenium 安裝&lt;/h2&gt;
 &lt;p&gt;在python裡執行以下程式碼，即可安裝Selenium套件。
-&lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning</title><link>http://localhost:1313/posts/20220704python_learning/</link><pubDate>Mon, 04 Jul 2022 10:36:37 +0800</pubDate><guid>http://localhost:1313/posts/20220704python_learning/</guid><description>&lt;p&gt;#上班逛到鐵人賽文章發現非常趣味的文章,紀錄一下過程~XDDDD&lt;/p&gt;
+&lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;</description></item><item><title>20220704Python_learning</title><link>https://cchmark.github.io/posts/20220704python_learning/</link><pubDate>Mon, 04 Jul 2022 10:36:37 +0800</pubDate><guid>https://cchmark.github.io/posts/20220704python_learning/</guid><description>&lt;p&gt;#上班逛到鐵人賽文章發現非常趣味的文章,紀錄一下過程~XDDDD&lt;/p&gt;
 &lt;p&gt;1.確認安裝好基本 Python 開發環境，以及 pip Python 套件管理工具。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;2.從 Windows 開始選單中，打開「Windows 系統」中的「命令提示字元」。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>http://localhost:1313/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>http://localhost:1313/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
+&lt;p&gt;2.從 Windows 開始選單中，打開「Windows 系統」中的「命令提示字元」。&lt;/p&gt;</description></item><item><title>MVC5 bootstrap 3 更新 bootstrap 5 紀錄</title><link>https://cchmark.github.io/posts/20220628csharpmvc/</link><pubDate>Tue, 28 Jun 2022 15:39:27 +0800</pubDate><guid>https://cchmark.github.io/posts/20220628csharpmvc/</guid><description>&lt;p&gt;#MVC5 bootstrap 3 更新 bootstrap 5&lt;/p&gt;
 &lt;p&gt;We replaced the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-C#" data-lang="C#"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bundles.Add(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ScriptBundle(&lt;span style="color:#e6db74"&gt;&amp;#34;~/bundles/mybundle&amp;#34;&lt;/span&gt;).Include(
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/Scripts/...&amp;#34;&lt;/span&gt;,

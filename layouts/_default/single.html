@@ -39,7 +39,9 @@
 
   <br>
   </br>
-  {{ if (and site.Config.Services.Disqus.Shortname (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
+  {{ if (and site.Params.giscus.enable (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
+  {{ partial "giscus.html" . }}
+  {{- else if (and site.Config.Services.Disqus.Shortname (ne .Params.DisableComments true) (ne .Params.disable_comments true)) -}}
   {{ partial "disqus.html" . }}
   {{- end }}
 

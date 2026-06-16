@@ -1,0 +1,62 @@
+<div class="giscus-container" style="margin-top: 2rem;">
+  {{ if and .Site.Params.giscus.repoId .Site.Params.giscus.categoryId }}
+    <div class="giscus"></div>
+  {{ else }}
+    <div style="padding: 1.5rem; border: 1px dashed #e0e0e0; border-radius: 8px; margin-top: 2rem; text-align: center; color: #888; background-color: var(--background-secondary, #fafafa);">
+      <p style="margin: 0 0 0.5rem 0; font-weight: bold;">💬 Giscus 留言板設定未完成</p>
+      <p style="margin: 0; font-size: 0.9rem;">請依照說明在 <code>config.toml</code> 中填入您的 <code>repoId</code> 與 <code>categoryId</code>。</p>
+    </div>
+  {{ end }}
+</div>
+
+{{ if and .Site.Params.giscus.repoId .Site.Params.giscus.categoryId }}
+<script>
+  (function() {
+    const getGiscusTheme = () => {
+      const theme = localStorage.getItem('theme') || 'auto';
+      if (theme === 'auto') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      return theme;
+    };
+
+    // 動態載入 giscus 客戶端腳本
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
+    script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
+    script.setAttribute('data-category', '{{ .Site.Params.giscus.category }}');
+    script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
+    script.setAttribute('data-mapping', '{{ default "pathname" .Site.Params.giscus.mapping }}');
+    script.setAttribute('data-strict', '{{ default "0" .Site.Params.giscus.strict }}');
+    script.setAttribute('data-reactions-enabled', '{{ default "1" .Site.Params.giscus.reactionsEnabled }}');
+    script.setAttribute('data-emit-metadata', '{{ default "0" .Site.Params.giscus.emitMetadata }}');
+    script.setAttribute('data-input-position', '{{ default "bottom" .Site.Params.giscus.inputPosition }}');
+    script.setAttribute('data-theme', getGiscusTheme());
+    script.setAttribute('data-lang', '{{ default "zh-TW" .Site.Params.giscus.lang }}');
+    script.setAttribute('data-loading', '{{ default "lazy" .Site.Params.giscus.loading }}');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    document.head.appendChild(script);
+
+    // 監聽網站本身的 data-theme 屬性變更，並同步切換 Giscus 主題
+    const updateGiscusTheme = () => {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: getGiscusTheme() } } },
+        'https://giscus.app'
+      );
+    };
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          updateGiscusTheme();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+  })();
+</script>
+{{ end }}
