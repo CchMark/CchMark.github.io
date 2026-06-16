@@ -772,6 +772,14 @@ figcaption {
   --sidebar-social-hover-bg: #0d9488;
   --sidebar-social-hover-color: #ffffff;
   --sidebar-social-hover-shadow: rgba(13, 148, 136, 0.4);
+
+  /* Toggle button variables */
+  --toggle-btn-bg: rgba(240, 246, 245, 0.85);
+  --toggle-btn-border: rgba(73, 117, 122, 0.15);
+  --toggle-btn-color: #3a5659;
+  --toggle-btn-hover-bg: #0d9488;
+  --toggle-btn-hover-color: #ffffff;
+  --toggle-btn-shadow: 4px 0 16px rgba(73, 117, 122, 0.12);
 }
 
 /* 2. Theme Variables for Sidebar (Dark Mode overrides) */
@@ -799,6 +807,14 @@ figcaption {
   --sidebar-social-hover-bg: #2dd4bf;
   --sidebar-social-hover-color: #0c1516;
   --sidebar-social-hover-shadow: rgba(45, 212, 191, 0.5);
+
+  /* Toggle button variables */
+  --toggle-btn-bg: rgba(22, 42, 44, 0.85);
+  --toggle-btn-border: rgba(255, 255, 255, 0.08);
+  --toggle-btn-color: rgba(255, 255, 255, 0.75);
+  --toggle-btn-hover-bg: #2dd4bf;
+  --toggle-btn-hover-color: #0c1516;
+  --toggle-btn-shadow: 4px 0 16px rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -826,6 +842,14 @@ figcaption {
     --sidebar-social-hover-bg: #2dd4bf;
     --sidebar-social-hover-color: #0c1516;
     --sidebar-social-hover-shadow: rgba(45, 212, 191, 0.5);
+
+    /* Toggle button variables */
+    --toggle-btn-bg: rgba(22, 42, 44, 0.85);
+    --toggle-btn-border: rgba(255, 255, 255, 0.08);
+    --toggle-btn-color: rgba(255, 255, 255, 0.75);
+    --toggle-btn-hover-bg: #2dd4bf;
+    --toggle-btn-hover-color: #0c1516;
+    --toggle-btn-shadow: 4px 0 16px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -941,4 +965,100 @@ figcaption {
   border-color: var(--sidebar-social-hover-bg) !important;
   transform: translateY(-3px) scale(1.1) !important;
   box-shadow: 0 0 15px var(--sidebar-social-hover-shadow) !important;
+}
+
+/* ==========================================================================
+   8. Sidebar Toggle Button & Collapse Styling
+   ========================================================================== */
+
+/* Enable smooth transitions for layout adjustments when sidebar toggles */
+.content {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@media (min-width: 48em) {
+  /* Sidebar transition */
+  .sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+  
+  /* Collapsed states */
+  body.sidebar-collapsed .sidebar {
+    transform: translateX(-18rem) !important;
+    box-shadow: none !important;
+  }
+  
+  body.sidebar-collapsed .content {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  body.sidebar-collapsed footer {
+    margin-left: 2rem !important;
+    max-width: calc(100vw - 4rem) !important;
+  }
+}
+
+/* Sidebar Toggle Circular Button (Fixed at top-left of sidebar) */
+.sidebar-toggle {
+  position: fixed !important;
+  top: 1.2rem !important;
+  left: 1.2rem !important;
+  width: 2.6rem !important;
+  height: 2.6rem !important;
+  background: var(--toggle-btn-bg) !important;
+  border: 1px solid var(--toggle-btn-border) !important;
+  border-radius: 50% !important;
+  color: var(--toggle-btn-color) !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--toggle-btn-shadow) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 10000;
+}
+
+.sidebar-toggle:hover {
+  background: var(--toggle-btn-hover-bg) !important;
+  color: var(--toggle-btn-hover-color) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .sidebar-toggle:hover {
+  box-shadow: 0 4px 20px rgba(45, 212, 191, 0.4) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sidebar-toggle:hover {
+    box-shadow: 0 4px 20px rgba(45, 212, 191, 0.4) !important;
+  }
+}
+
+.sidebar-toggle:focus {
+  outline: none;
+}
+
+.sidebar-toggle .toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Hide toggle button on small screens where sidebar is not fixed */
+@media (max-width: 48em) {
+  .sidebar-toggle {
+    display: none !important;
+  }
 }

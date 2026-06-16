@@ -46,3 +46,32 @@
     </section>
   </div>
 </aside>
+
+<!-- Sidebar Toggle Button (Placed outside <aside> to remain fixed on screen during transform) -->
+<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle Sidebar" title="收起側邊欄">
+  <span class="toggle-icon">‹</span>
+</button>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const toggleIcon = toggleBtn ? toggleBtn.querySelector('.toggle-icon') : null;
+    const body = document.body;
+    if (!toggleBtn || !toggleIcon) return;
+
+    // Sync state from localStorage
+    const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+    if (isCollapsed) {
+      body.classList.add('sidebar-collapsed');
+      toggleBtn.title = "展開側邊欄";
+      toggleIcon.textContent = '☰';
+    }
+
+    toggleBtn.addEventListener('click', function() {
+      const collapsed = body.classList.toggle('sidebar-collapsed');
+      localStorage.setItem('sidebar-collapsed', collapsed);
+      toggleBtn.title = collapsed ? "展開側邊欄" : "收起側邊欄";
+      toggleIcon.textContent = collapsed ? '☰' : '‹';
+    });
+  })();
+</script>
