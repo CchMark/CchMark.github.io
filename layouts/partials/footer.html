@@ -16,7 +16,7 @@
       </span>
 
       <!-- 隱私友好的瀏覽統計 - 無第三方 Cookie -->
-      <span id="privacy-pageview-counter">
+      <span id="privacy-visit-counter">
         <noscript>&middot; 感謝您的訪問！</noscript>
       </span>
     </p>
@@ -29,14 +29,21 @@
   'use strict';
   
   function initPrivacyCounter() {
-    const counter = document.getElementById('privacy-pageview-counter');
+    const counter = document.getElementById('privacy-visit-counter');
     if (!counter) return;
     
-    const sessionKey = 'privacy-view-count';
-    let viewCount = parseInt(sessionStorage.getItem(sessionKey) || '0') + 1;
-    sessionStorage.setItem(sessionKey, viewCount.toString());
+    const localKey = 'privacy-visit-count';
+    const sessionKey = 'privacy-session-active';
     
-    counter.innerHTML = ` &middot; 本次訪問第 <span style="color: #007cba;">${viewCount}</span> 頁`;
+    let visitCount = parseInt(localStorage.getItem(localKey) || '0');
+    
+    if (!sessionStorage.getItem(sessionKey)) {
+      visitCount += 1;
+      localStorage.setItem(localKey, visitCount.toString());
+      sessionStorage.setItem(sessionKey, 'true');
+    }
+    
+    counter.innerHTML = ` &middot; 本次訪問第 <span style="color: #007cba;">${visitCount}</span> 次`;
   }
   
   if (document.readyState === 'loading') {
